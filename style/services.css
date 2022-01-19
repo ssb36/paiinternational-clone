@@ -1,0 +1,58 @@
+
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+   min-height: 100vh;
+    padding-bottom: 50px;
+}
+#services_home_head{
+    display: grid;
+    height: 100%;
+    grid-template-rows: 6% 90%;
+}
+#services_home{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    gap: 5px;
+    padding: 0px 6px;
+    color: #484848;
+    
+}
+#sevices_color{
+    color: #ef7f1a;
+}
+#home_color{
+    text-decoration: none;
+    color: #484848;
+}
+#services_container{
+    padding: 1%;
+    display: grid;
+    grid-template-rows: 80px 500px 50px 140px;
+}
+
+#img_pai_value{
+    height: 100%;
+    width: 100%;
+}
+#pai_protectoin{
+    display: grid;
+    background-color:#f4f4f4 ;
+    color: #666666;
+    padding: 1%;
+    font-size: 16px;
+    grid-gap: 8px;
+    padding-left: 2%;
+}
+#pai_value_added_services{
+    color: #ea5222;
+    align-items: center;
+    display: flex;
+    padding: 6px 0px 6px 10px;
+}
+#services_h1_tag{
+    margin-bottom: 10px;
+}
