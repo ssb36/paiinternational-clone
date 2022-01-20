@@ -6,310 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
-    <style>
-        body {
-            background-color: snow;
-        }
-
-        #dmain {
-            width: 97%;
-            height: 600px;
-            border: 1px solid red;
-            margin: auto;
-        }
-
-        #tag1 {
-            padding: 0px;
-            /* margin: 0px; */
-            display: flex;
-            /* border: 1px solid black; */
-
-        }
-
-        #tag1>p {
-            margin-right: 15px;
-            font-size: 17px;
-        }
-
-        #dhome {
-            color: dimgray;
-            text-decoration: none;
-        }
-
-        #dhome:hover {
-            color: black;
-        }
-
-        #dgreater {
-            color: dimgray;
-        }
-
-        #dcart {
-            color: darkorange;
-        }
-
-        #tag2 {
-            display: flex;
-
-        }
-
-        #tag2_left {
-            flex: 1;
-
-        }
-
-        #tag2_left>p {
-            font-size: 17px;
-            font-weight: bold;
-        }
-
-        #tag2_right {
-            flex: 1;
-            display: flex;
-            gap: 5px;
-        }
-
-        #continue {
-            text-decoration: none;
-            font-size: 17px;
-            font-weight: bold;
-
-        }
-
-        #continue:hover {
-            color: black;
-        }
-
-        #order {
-            font-size: 17px;
-            font-weight: bold;
-        }
-
-        #summery {
-            font-size: 15px;
-            padding-top: 5px;
-            font-weight: bold;
-            color: dimgray;
-        }
-
-        #tag3 {
-            display: flex;
-            height: 500px;
-            gap: 7px;
-        }
-
-        #tag3_left {
-            flex: 65%;
-            border: 1px solid blueviolet;
-        }
-
-        #tag3_left_btm {
-            width: 100%;
-            /* border: 1px solid red; */
-            height: 100px;
-            display: flex;
-            justify-content: space-around;
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-            padding-top: 15px;
-            overflow: hidden;
-            border-radius: 10px;
-
-        }
-
-        #tag3_left_btm>div {
-            flex: 1;
-            /* border: 1px solid blueviolet; */
-            margin-left: 25px;
-            line-height: 10px;
-        }
-
-        #tag3_left_btm>div>img {
-            height: 25px;
-            width: 25px;
-
-        }
-
-        #tag3_left_btm>div>p {
-            /* font-size: 15px; */
-            font-size: 16px;
-        }
-
-        #tag3_left_btm>div>#clr {
-            color: dimgray;
-            font-size: 17px;
-        }
-
-        #tag3_right {
-            flex: 35%;
-            /* border: 1px solid blueviolet; */
-        }
-
-        #tag3_right_top {
-            border-radius: 10px;
-            /* border: 1px solid red; */
-            width: 100%;
-            height: 150px;
-            margin-bottom: 20px;
-            background-color: white;
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-            /* border: 1px solid red; */
-            overflow: hidden;
-
-        }
-
-        #tag3_right_bottom {
-            /* border: 1px solid red; */
-            /* height: 300px; */
-            height: auto;
-            border-radius: 10px;
-            background-color: white;
-            padding-bottom: 15px;
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        }
-
-        #coupon {
-            display: flex;
-        }
-
-        #coupon_img {
-            height: 25px;
-            width: 25px;
-            object-fit: cover;
-            background-color: white;
-            padding-top: 17px;
-            padding-left: 20px;
-            padding-right: 5px;
-            margin-bottom: 2%;
-        }
-
-        #coupon_img+span {
-            padding-top: 20px;
-            font-weight: bold;
-            font-size: 17px;
-        }
-
-        #c_code {
-            padding-left: 20px;
-            color: dimgray;
-            font-size: 17px;
-            margin-top: 0px;
-            margin-bottom: 1%;
-        }
-
-        #e_cou {
-            display: flex;
-            padding-left: 20px;
-
-        }
-
-        #e_coupon {
-            /* padding: 10px 95px; */
-            font-size: 16px;
-            width: 350px;
-            padding-left: 15px;
-        }
-
-        #c_apply {
-            padding: 10px 25px;
-            margin-left: 6px;
-            border: none;
-            background-color: darkorange;
-            border-radius: 5px;
-            color: white;
-            font-size: 15px;
-            font-weight: bold;
-
-        }
-
-        #tag3_right_bottom>#top {
-            display: flex;
-            padding-top: 15px;
-        }
-
-        #tag3_right_bottom>#top>#left {
-            width: 70%;
-            /* border: 1px solid black; */
-            margin-left: 4%;
-            /* background-color: teal; */
-            line-height: 11px;
-
-        }
-
-        #tag3_right_bottom>#top>#left>p {
-            color: dimgray;
-            font-size: 17px;
-
-
-        }
-
-        #tag3_right_bottom>#top>#left>b {
-            font-size: 17px;
-        }
-
-        #tag3_right_bottom>#top>#right span {
-            color: dimgray;
-            font-size: 17px;
-        }
-
-        #tag3_right_bottom>#top>#right b {
-            font-size: 17px;
-        }
-
-        #tag3_right_bottom>#top>#right {
-            width: 30%;
-            /* border: 1px solid black; */
-            line-height: 11px;
-        }
-
-        #checkout {
-           
-            margin-top: 15px;
-            margin-left: 390px;
-            background-color: darkslateblue;
-            color: white;
-            border: none;
-            margin-bottom: 12px;
-            margin-right: 20px;
-           width: 200px;
-           padding: 10px 0px;
-        }
-
-        .item_div {
-            height: 180px;
-            width: 100%;
-            border: 1px solid blue;
-            padding: 25px 60px;
-            box-sizing: border-box;
-            display: flex;
-            gap: 5%;
-
-        }
-
-        .item_div>:nth-child(1) {
-            height: 100%;
-            width: 10%;
-            border: 1px solid blue;
-        }
-
-        .item_div>:nth-child(2) {
-            height: 100%;
-            width: 40%;
-            border: 1px solid blue;
-        }
-
-        .item_div>:nth-child(3) {
-            height: 100%;
-            width: 15%;
-            border: 1px solid blue;
-            margin-left: 10%;
-        }
-
-        .item_div>:nth-child(4) {
-            height: 100%;
-            width: 15%;
-            border: 1px solid blue;
-        }
-    </style>
+    <link rel="stylesheet" href="../style/cart.css">
 </head>
 
 <body>
@@ -336,16 +33,7 @@
             <div id="tag3_left">
                 <div id="tag3_left_top">
 
-                    <div class="item_div">
-
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-
-
-
-                    </div>
+                 
 
 
                 </div>
@@ -426,17 +114,85 @@
 
 </html>
 <script>
-    let cart_items = [
-        {
-            "id": 9,
-            "title": "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
-            "price": 64,
-            "description": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system",
-            "category": "electronics",
-            "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
-            "rating": { "rate": 3.3, "count": 203 }
-        }
-    ]
+    let cart_items = [{ "id": 9, "title": "WD 2TB Elements Portable External Hard Drive - USB 3.0 ", "price": 64, "description": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system", "category": "electronics", "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg", "rating": { "rate": 3.3, "count": 203 } },
+    { "id": 10, "title": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s", "price": 109, "description": "Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)", "category": "electronics", "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg", "rating": { "rate": 2.9, "count": 470 } },
+    { "id": 11, "title": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5", "price": 109, "description": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.", "category": "electronics", "image": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg", "rating": { "rate": 4.8, "count": 319 } },
+    { "id": 12, "title": "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive", "price": 114, "description": "Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty", "category": "electronics", "image": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg", "rating": { "rate": 4.8, "count": 400 } },
+    { "id": 13, "title": "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin", "price": 599, "description": "21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz", "category": "electronics", "image": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg", "rating": { "rate": 2.9, "count": 250 } },
+    { "id": 14, "title": "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ", "price": 999.99, "description": "49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY, HDR support and factory calibration provides stunningly realistic and accurate color and contrast 144HZ HIGH REFRESH RATE and 1ms ultra fast response time work to eliminate motion blur, ghosting, and reduce input lag", "category": "electronics", "image": "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg", "rating": { "rate": 2.2, "count": 140 } }]
+
+   
+
+
+
+    
+    let main1 = document.getElementById("tag3_left_top");
+
+
+
+
+   
+    cart_items.map((el) => {
+        let item_div = document.createElement("div");
+        item_div.id="item_div"
+
+        let div1 = document.createElement("div");
+        let item_img = document.createElement("img");
+        // item_img.id = "item_img";
+        item_img.src = el.image;
+        div1.append(item_img);
+
+        let div2 = document.createElement("div");
+        let p1 = document.createElement("p");
+        p1.id = "item_title";
+        p1.textContent = el.title;
+        let p2 = document.createElement("p");
+        p2.id = "item_qty";
+        let b1 = document.createElement("b");
+        b1.textContent = `Qty:1`;
+        p2.append(b1);
+
+        let p3 = document.createElement("p");
+
+        let span1 = document.createElement("span");
+        span1.style.color = "darkslateblue";
+        span1.style.fontWeight = "bold";
+        span1.textContent = `₹+${el.price}.00`
+        let span2 = document.createElement("span");
+        span2.style.color = "darkslategray";
+        span1.textContent = `(10%Off)`;
+
+        p3.style.display = "flex";
+        p3.append(span1,span2);
+
+        div2.append(p1, p2, p3);
+
+        let div3 = document.createElement("div");
+        let div31 = document.createElement("div");
+        let span31 = document.createElement("span");
+        span31.textContent = "-";
+        div31.append(span31);
+        let div32 = document.createElement("div");
+        let span32 = document.createElement("span");
+        span32.textContent = "1";
+        div32.append(span32);
+        let div33 = document.createElement("div");
+        let span33 = document.createElement("span");
+        span33.textContent = "+";
+        div33.append(span33);
+        div3.append(div31, div32, div33);
+
+
+        let div4 = document.createElement("div");
+        let r_img = document.createElement("img");
+        r_img.src = "data:image/png;base64,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"
+        let span41 = document.createElement("span");
+        span41.textContent = "REMOVE";
+        div4.append(r_img, span41);
+        item_div.append(div1, div2, div3, div4);
+        main1.append(item_div);
+
+    })
 
 
 
