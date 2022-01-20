@@ -103,7 +103,6 @@ body {
 }
 
 /*----------------------------- div3 --------------------------- */
-
 #div3 {
   margin-top: 100px;
   display: flex;
@@ -113,6 +112,10 @@ body {
 }
 #div3 > div {
   width: 25%;
+}
+
+#imgdiv3 {
+  margin-top: 7%;
 }
 
 #div3 > div {
@@ -127,10 +130,6 @@ body {
 }
 
 #div3 > div > div {
-  line-height: 45%;
-}
-
-#div3 > div > div {
   font-size: 16px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -141,6 +140,11 @@ body {
 }
 
 /*----------------------------- div4 --------------------------- */
+
+/* @media only screen and (min-width: 600px) and (max-width: 2500px) {
+
+  
+} */
 
 #div4 {
   height: 400px;
