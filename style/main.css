@@ -5,10 +5,11 @@ body {
 /*-------------------div1------------------------ */
 
 #div1 {
-  height: 170px;
+  height: 150px;
   width: 100%;
   margin: auto;
   display: flex;
+  margin-top: 35px;
 }
 
 #div1leftbtn {
@@ -18,7 +19,7 @@ body {
 #div1center {
   flex: 9;
   display: flex;
-  gap: 10px;
+  gap: 20px;
 }
 
 #div1rightbtn {
@@ -36,7 +37,7 @@ body {
 }
 #div1center > div > div > img {
   margin-top: 16px;
-  width: 80%;
+  width: 60%;
 }
 #div1center > div:hover {
   background-color: #f1f1f1;
@@ -52,7 +53,7 @@ body {
 }
 #navButton > img {
   width: 100%;
-  margin-top: 50px;
+  margin-top: 23px;
 }
 
 #navButton:hover {
@@ -65,7 +66,7 @@ body {
   display: flex;
   height: 500px;
   margin: 15px;
-  margin-top: 50px;
+  margin-top: 30px;
   gap: 20px;
 }
 
@@ -209,11 +210,9 @@ body {
   margin-right: 16px;
 }
 #d4rightdiv > div > p {
-  line-height: 5px;
   margin-left: 5px;
 }
 #d4rightdiv > div > h5 {
-  line-height: 5px;
   margin-left: 5px;
 }
 

@@ -65,13 +65,6 @@ function navbar(){
     </nav>
 </div>
 <div class="content">
-    Homepage here
-    <div>
-
-    </div>
-    <div>
-
-    </div>
 </div>`
 }
 
