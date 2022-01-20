@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Navigation Menu</title>
+    <link rel="stylesheet" href="../style/testnav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div id="container"></div>
+
+    
+</body>
+
+</html>
+<script type="module">
+import navbar from '../script/testnav.js'
+console.log('navbar:', navbar)
+
+let container = document.getElementById('container')
+container.innerHTML = navbar()
+    var devacce = document.getElementById('devassesories').addEventListener('click', ShowAcees)
+
+    async function ShowAcees() {
+        try {
+            var res = await fetch("https://fakestoreapi.com/products/category/electronics")
+            var data = await res.json()
+            console.log('data:', data)
+            localStorage.setItem("key", JSON.stringify(data))
+            window.location = "./product.html";
+        }
+        catch (error) {
+            console.log(error)
+        }
+
+    }
+
+    var button = document.getElementById('devlocation')
+    button.addEventListener("click", () => {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(onSuccess, onError);
+        }
+        else {
+            button.innerText = "Your Browser not support GeoLocation"
+        }
+    })
+
+    function onSuccess(position) {
+        let { latitude, longitude } = position.coords;
+        fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=865fa4297ac546e48c946147a54eaf61`)
+            .then(response =>
+                (response.json())
+                    .then(result => {
+                        let allDetails = result.results[0].components;
+                        let { county, country } = allDetails;
+                        console.log('county,country:', county, country)
+                        button.innerText = `${county},${country}`;
+                    })
+            )
+    }
+
+    function onError(eroor) {
+        if (error.code == 1) {
+            alert("User denied the request")
+        }
+
+    }
+</script>
