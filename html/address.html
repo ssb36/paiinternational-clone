@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style/check.css">
+  <script src="https://kit.fontawesome.com/5c6293b5b4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="top">
+      <span class="sp1">Home</span>
+      <i class="fas fa-chevron-right"></i>
+      <span class="sp2">Checkout</span>
+    </div>
+    <div class="bottom">
+      <div class="left">
+        <span>Checkout</span>
+        <div class="col">
+          <div class="colt">
+            <div class="on or">1</div>
+            <span>Login or Signup</span>
+          </div>
+          <div class="colb">
+            <input type="text" placeholder="name"> <input type="text" placeholder="phone">
+          </div>
+        </div>
+
+        <div class="adcol2">
+          <div class="col2t">
+            <div class="on wh">2</div>
+            <span>Shipping Address & Billing Address
+            </span>
+          </div>
+          <center class="cen">Please Add Address!</center>
+          <div class="adcol2b">
+            <!-- address detail -->
+           <center class="cen2 bold">New Address</center>
+           <div class="adbot">
+            <div class="adlef">
+                <p>Customer Tag Name <span class="str">*</span>
+               </p>
+               <input type="text" placeholder="Provide Tag Like Home/Office to Identified Customer Addre" class="adinp">
+
+               <p>Customer Mobile <span class="str">*</span>
+               </p>
+               <input type="text" placeholder="Enter the customer mobile Number" class="adinp" id="mob">
+               <p>Pincode <span class="str">*</span>
+               </p>
+               <input type="text" placeholder="Enter the customer pincode" class="adinp" id="pin">
+              </div>
+   
+              <div class="adrig">
+                <p>Customer Name <span class="str">*</span>
+                </p>
+                <input type="text" placeholder="Enter the customer name" class="adinp" id="name">
+
+                <p>Alternate Phone (Optional) <span class="str">*</span>
+                </p>
+                <input type="text" placeholder="Enter the Alternate Phone" class="adinp">
+
+                <p>Locality <span class="str">*</span></p>
+                    
+                    <select name="" id="" class="opt">
+                        <option value="" class="opt"> Select Locality</option>
+                        
+                    </select>
+                
+              </div>
+           </div>
+           <p>Address <span class="str">*</span></p>
+           <textarea name="" id="add" cols="30" rows="10" class="adinp2" placeholder="Enter the customer address" ></textarea>
+           <!-- bnnhb -->
+
+           <div class="adbot">
+            <div class="adlef">
+                <p>District </p>
+               </p>
+               <input type="text" placeholder="Enter the District" class="adinp" id="dis">
+
+               <p>City <span class="str">*</span>
+               </p>
+               <input type="text" placeholder="Enter the City" class="adinp" id="city">
+              </div>
+   
+              <div class="adrig">
+                <p>Landmark <span class="str">*</span>
+                </p>
+                <input type="text" placeholder="Enter the landmark" class="adinp" id="lam">
+
+                <p>State <span class="str">*</span>
+                </p>
+                <input type="text" placeholder="Enter State" class="adinp" id="state">
+              </div>
+           </div>
+           <br>
+           <div class="check">
+               <div class="checklef">
+                <input type="checkbox" name="" id=""> <span class="cheksp">Primary Address</span>
+               </div>
+            <div class="checkrit">
+                <input type="checkbox" name="" id=""> <span class="cheksp">Shipping Address</span>
+            </div>
+           </div>
+           <a href="secondcheck.html"><button class="btnsv" onclick="detail()">SAVE AND CONTINUE</button></a>
+          </div>
+        </div>
+
+        <div class="col3">
+          <div class="on or">3</div>
+          <span>Products</span>
+        </div>
+        <div class="col3">
+          <div class="on or">4</div>
+          <span>Shipping Method</span>
+        </div>
+        <div class="col3">
+          <div class="on or">5</div>
+          <span>Choose Payment Mode
+          </span>
+        </div>
+      </div>
+      <div class="right">
+        <div class="to">
+          <span class="lef">Order Summary </span>
+          <span class="rig">( 763a89#### )</span>
+        </div>
+        <div class="ritop">
+          <div class="di1ritop">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Tag_font_awesome.svg/768px-Tag_font_awesome.svg.png"
+              alt="" class="cop">
+            <span>Use Coupon Code</span>
+          </div>
+          <h3>Enter your coupon code if you have one.</h3>
+          <div class="copcode">
+            <input type="text" placeholder="Enter Your Coupon Code">
+            <button id="copbtn"> APPLY</button>
+          </div>
+        </div>
+         <div class="price">
+           
+           <div class="itepr">
+             <p>Items Price (without tax):</p>
+             <input type="text" class="inp">
+           </div>
+
+           <div class="itepr">
+            <p>CGST:</p>
+            <input type="text" class="inp">
+          </div>
+          <div class="itepr">
+            <p>SGST:</p>
+            <input type="text" class="inp">
+          </div>
+          <div class="itepr">
+            <p class="bold">SubTotal:</p>
+            <input type="text" class="inp">
+          </div>
+          <div class="itepr">
+            <p>Discount Price:</p>
+            <input type="text" class="inp">
+          </div>
+          <div class="itepr">
+            <p>Pai Wallet :</p>
+            <input type="text" class="inp">
+          </div>
+          <div class="itepr">
+            <p>Gift Wrap :</p>
+            <input type="text" class="inp">
+          </div>
+          <div class="itepr">
+            <p>Shipping Charge :</p>
+            <input type="text" class="inp">
+          </div>
+          <div class="itepr">
+            <p class="bold">Total Price :</p>
+            <input type="text" class="inp">
+          </div>
+         </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<script>
+  
+  function detail(){
+    var name = document.getElementById("name").value;
+  var phon = document.getElementById("mob").value;
+  var ci = document.getElementById("city").value;
+  console.log(ci);
+  var state = document.getElementById("state").value;
+  var add = document.getElementById("add").value;
+  var pin = document.getElementById("pin").value;
+  var landmark = document.getElementById("lam").value;
+    var data = {
+       name : name,
+       phon : phon,
+       state : state,
+       add : add,
+       pin : pin,
+       city : ci,
+       landmark : landmark 
+  }
+  localStorage.setItem("adetail",JSON.stringify(data))
+  }
+   
+</script>

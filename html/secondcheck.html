@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style/check.css">
+  <script src="https://kit.fontawesome.com/5c6293b5b4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="top">
+      <span class="sp1">Home</span>
+      <i class="fas fa-chevron-right"></i>
+      <span class="sp2">Checkout</span>
+    </div>
+    <div class="bottom">
+      <div class="left">
+        <span>Checkout</span>
+        <div class="col">
+          <div class="colt">
+            <div class="on or">1</div>
+            <span>Login or Signup</span>
+          </div>
+          <div class="colb">
+            <input type="text" placeholder="name"> <input type="text" placeholder="phone">
+          </div>
+        </div>
+
+        <div class="col2">
+          <div class="col2t">
+            <div class="on wh">2</div>
+            <span>Shipping Address & Billing Address
+            </span>
+          </div>
+          <div class="seco">
+            <input type="checkbox" name="" id=""> <span class="cheksp"> Shipping Address & Billing Address Same</span>
+          </div>
+          <div class="shibtn">
+            <button class="shipad">Shipping Address</button>
+            <button class="blipad">Billing Address</button>
+          </div>
+          <div class="shibott">
+            <div class="cir"></div><span>#home</span>
+            <div class="addet">
+                <b id="b1"></b> <span id="b2"></span> <br>
+                <p id="ad1"></p>
+                <b>Landmark</b>: <b id="lam"></b>
+
+            </div>
+          </div>
+          
+          <div class="col2b">
+            <a href="address.html" id="btn">+ Add Address</a> 
+          </div>
+        </div>
+
+        <div class="col3">
+          <div class="on or">3</div>
+          <span>Products</span>
+        </div>
+        <div class="col3">
+          <div class="on or">4</div>
+          <span>Shipping Method</span>
+        </div>
+        <div class="col3">
+          <div class="on or">5</div>
+          <span>Choose Payment Mode
+          </span>
+        </div>
+      </div>
+      <div class="right">
+        <div class="to">
+          <span class="lef">Order Summary </span>
+          <span class="rig">( 763a89#### )</span>
+        </div>
+        <div class="ritop">
+          <div class="di1ritop">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Tag_font_awesome.svg/768px-Tag_font_awesome.svg.png"
+              alt="" class="cop">
+            <span>Use Coupon Code</span>
+          </div>
+          <h3>Enter your coupon code if you have one.</h3>
+          <div class="copcode">
+            <input type="text" placeholder="Enter Your Coupon Code">
+            <button id="copbtn"> APPLY</button>
+          </div>
+        </div>
+         <div class="price">
+           
+           <div class="itepr">
+             <p>Items Price (without tax):</p>
+             <input type="text" class="inp">
+           </div>
+
+           <div class="itepr">
+            <p>CGST:</p>
+            <input type="text" class="inp">
+          </div>
+          <div class="itepr">
+            <p>SGST:</p>
+            <input type="text" class="inp">
+          </div>
+          <div class="itepr">
+            <p class="bold">SubTotal:</p>
+            <input type="text" class="inp">
+          </div>
+          <div class="itepr">
+            <p>Discount Price:</p>
+            <input type="text" class="inp">
+          </div>
+          <div class="itepr">
+            <p>Pai Wallet :</p>
+            <input type="text" class="inp">
+          </div>
+          <div class="itepr">
+            <p>Gift Wrap :</p>
+            <input type="text" class="inp">
+          </div>
+          <div class="itepr">
+            <p>Shipping Charge :</p>
+            <input type="text" class="inp">
+          </div>
+          <div class="itepr">
+            <p class="bold">Total Price :</p>
+            <input type="text" class="inp">
+          </div>
+         </div>
+      </div>
+    </div>
+  </div>
+  <p id="name"></p>
+</body>
+
+</html>
+
+<script>
+    var address_det = JSON.parse(localStorage.getItem("adetail"))
+       
+    console.log(address_det);
+   // let username = address_det.name;
+    let namep = document.getElementById("b1")
+    let phonno = document.getElementById("b2")
+    let area = document.getElementById("ad1")
+    let land = document.getElementById("lam")
+    namep.textContent = address_det.name;
+    phonno.textContent = address_det.phon;
+    area.textContent = address_det.add +" "+address_det.city +","+address_det.state +"-"+ address_det.pin;
+    land.textContent = address_det.pin
+</script>
