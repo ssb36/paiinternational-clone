@@ -17,7 +17,7 @@ function navbar(){
         </div>
 
 
-        <div id="devlogin"><a href="../html/login.html" id="devbtn">Login</a></div>
+        <div id="devlogin"><a href="../html/login.html" id="devbtn"></a></div>
         <div id="devcart"><img src="https://www.paiinternational.in/static/assets/pai/images/cart-icon.png" alt="">
         </div>
 
