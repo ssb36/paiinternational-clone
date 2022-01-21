@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../style/testnav.css"/>
+    <link rel="stylesheet" href="../style/footer.css"/>
+
+    <link rel="stylesheet" href="/style/map.css"/>
+    <script
+      src="https://kit.fontawesome.com/683b4b40e3.js"
+      crossorigin="anonymous"
+    ></script>
+
+
+  </head>
+  <body>
+    <div id="div_container"></div>
+    <div id="container">
+      <div id="home_locator">
+        <h4><a id="home_head" href="../index.html">Home</a></h4>
+        <h4>></h4>
+        <h4><a href="../html/map.html" id="home_store">Store Locator</a></h4>
+      </div>
+      <div id="map_flex">
+        <div id="map">
+          <div id="map_1chiled">
+            <div id="store_locator">Store Locator</div>
+            <div id="search">
+              <input
+                type="text"
+                value="Pai International bangalure"
+                id="search_store"
+                placeholder="Search Store"
+              />
+              <button onclick="showMapData()" id="search_btn">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+          <div id="map_container"></div>
+        </div>
+        <div id="random_stores"></div>
+      </div>
+      <div id="static_details">
+        <div id="stactic_details_container">
+          <div>
+            <img
+              src="https://www.paiinternational.in/static/assets/pai/images/store-locator-icon.png"
+              alt=""
+            />
+            <p>MBS</p>
+          </div>
+          <div>
+            <img
+              src="https://www.paiinternational.in/static/assets/pai/images/pai_locator_furniture01.png"
+              alt=""
+            />
+            <p>Furniture</p>
+          </div>
+          <div>
+            <img
+              src="https://www.paiinternational.in/static/assets/pai/images/pai_locators/blue_locator_25X30.png"
+              alt=""
+            />
+            <p>MBS And Furniture</p>
+          </div>
+          <div>
+            <img
+              src="https://www.paiinternational.in/static/assets/pai/images/pai_locators/red_blue_locator_25X30.png"
+              alt=""
+            />
+            <p>Mobile</p>
+          </div>
+          <div>
+            <img
+              src="https://www.paiinternational.in/static/assets/pai/images/pai_locators/blue_sky_locator_25X30.png"
+              alt=""
+            />
+            <p>Smart Electronics</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+  </body>
+</html>
+
+<script src="/script/map.js" type="module"></script>
