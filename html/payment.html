@@ -67,13 +67,23 @@
           <span>Shipping Method</span>
         </div>
         <!-- ndfghgfdjgcd -->
-        <a href="./payment.html" class="pay">
-          <div class="col3">
-            <div class="on or">5</div>
+        
+          <div class="col3 pay2" >
+            <div class="on or wh">5</div>
             <span>Choose Payment Mode
             </span>
           </div>
-        </a>
+          <div class="col3">
+            <input type="radio" name="payment" id="">
+            <span>Razorpay
+            </span>
+          </div>
+          <div class="col3">
+            <input type="radio" name="payment" id="">
+            <span>Cash on Delivery
+            </span>
+          </div>
+          <button class="paybtn" onclick="payfun()">PAY NOW</button>
       </div>
       <div class="right">
         <div class="to">
@@ -142,16 +152,7 @@
 </html>
 
 <script>
-    var address_det = JSON.parse(localStorage.getItem("adetail"))
-       
-    console.log(address_det);
-   // let username = address_det.name;
-    let namep = document.getElementById("b1")
-    let phonno = document.getElementById("b2")
-    let area = document.getElementById("ad1")
-    let land = document.getElementById("lam")
-    namep.textContent = address_det.name;
-    phonno.textContent = address_det.phon;
-    area.textContent = address_det.add +" "+address_det.city +","+address_det.state +"-"+ address_det.pin;
-    land.textContent = address_det.pin
+    function payfun(){
+        alert("Payment Successful");
+    }
 </script>
