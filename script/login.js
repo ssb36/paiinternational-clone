@@ -146,7 +146,7 @@ let check_user=(arr,name,psd)=>{
            
             setTimeout(()=>{
                 alert("Login Succesfull");
-                window.location.href="/index.html";
+                window.location.href="../index.html";
             },2000);
 
            count=1;
