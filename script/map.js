@@ -23,9 +23,9 @@ div_footer.innerHTML=footer();
       devbtn.innerText="Login";
   }
   else{
-      let devbtn=document.getElementById("devbtn");
-      devbtn.innerText=displayNameOfUser;
-  }
+    let devbtn=document.getElementById("devbtn");
+    devbtn.innerText=`Welcome ${displayNameOfUser}`;
+}
   
 
 
