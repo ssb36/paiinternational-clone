@@ -24,7 +24,7 @@
         </div>
         <div id="tag2">
             <div id="tag2_left">
-                <p>My cart ( <span id="items_len">1</span> )</p>
+                <p>My cart ( <span id="items_len">0</span> )</p>
             </div>
             <div id="tag2_right">
                 <p><a href="" id="continue">Continue shopping</a></p>
@@ -135,6 +135,8 @@ devbtn.innerText="Login"
    
     // ----------------------------------importing end----------------------------------
     
-    
-    
+    document.getElementById("checkout").addEventListener("click",goto_checkout)
+    function goto_checkout(){
+        window.location.href="checkout.html";
+    }
     </script>

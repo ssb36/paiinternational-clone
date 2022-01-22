@@ -7,10 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="../style/check.css">
+  <link rel="stylesheet" href="../style/testnav.css"/>
+    <link rel="stylesheet" href="../style/footer.css"/>
   <script src="https://kit.fontawesome.com/5c6293b5b4.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+  <div id="p_cont"></div>
   <div class="container">
     <div class="top">
       <span class="sp1">Home</span>
@@ -31,7 +34,7 @@
         </div>
 
         <div class="adcol2">
-          <div class="col2t">
+          <div class="col2tp">
             <div class="on wh">2</div>
             <span>Shipping Address & Billing Address
             </span>
@@ -138,53 +141,54 @@
           </div>
           <h3>Enter your coupon code if you have one.</h3>
           <div class="copcode">
-            <input type="text" placeholder="Enter Your Coupon Code">
-            <button id="copbtn"> APPLY</button>
+            <input type="text" placeholder="Enter Your Coupon Code" id="e_coupon">
+            <button id="copbtn" onclick="coupon_apply()"> APPLY</button>
           </div>
         </div>
          <div class="price">
            
-           <div class="itepr">
-             <p>Items Price (without tax):</p>
-             <input type="text" class="inp">
-           </div>
+          <div class="itepr">
+            <p>Items Price (without tax):</p>
+            <p><b>₹</b> <span id="p_wot">0.00</span></p>
+          </div>
 
-           <div class="itepr">
-            <p>CGST:</p>
-            <input type="text" class="inp">
-          </div>
           <div class="itepr">
-            <p>SGST:</p>
-            <input type="text" class="inp">
-          </div>
-          <div class="itepr">
-            <p class="bold">SubTotal:</p>
-            <input type="text" class="inp">
-          </div>
-          <div class="itepr">
-            <p>Discount Price:</p>
-            <input type="text" class="inp">
-          </div>
-          <div class="itepr">
-            <p>Pai Wallet :</p>
-            <input type="text" class="inp">
-          </div>
-          <div class="itepr">
-            <p>Gift Wrap :</p>
-            <input type="text" class="inp">
-          </div>
-          <div class="itepr">
-            <p>Shipping Charge :</p>
-            <input type="text" class="inp">
-          </div>
-          <div class="itepr">
-            <p class="bold">Total Price :</p>
-            <input type="text" class="inp">
-          </div>
+           <p>CGST:</p>
+           <p><b>₹</b><span id="p_cgst"> 0.00</span></p>
+         </div>
+         <div class="itepr">
+           <p>SGST:</p>
+           <p><b>₹</b><span id="p_sgst"> 0.00</span></p>
+         </div>
+         <div class="itepr">
+           <p class="bold">SubTotal:</p>
+           <p><b>₹</b><span id="sub_total"> 0.00</span></p>
+         </div>
+         <div class="itepr">
+           <p>Discount Price:</p>
+           <p><b>₹</b><span id="dis_p"> 0.00</span></p>
+         </div>
+         <div class="itepr">
+           <p>Pai Wallet :</p>
+           <p><b>₹</b> <span>0.00</span> </p>
+         </div>
+         <div class="itepr">
+           <p>Gift Wrap :</p>
+           <p><b>₹</b> <span>0.00</span> </p>
+         </div>
+         <div class="itepr">
+           <p>Shipping Charge :</p>
+           <p><b>₹</b> <span>0.00</span> </p>
+         </div>
+         <div class="itepr">
+           <p class="bold">Total Price :</p>
+           <p><b>₹</b> <span id="tot_p">0.00</span> </p>
+         </div>
          </div>
       </div>
     </div>
   </div>
+  <div id="p_foot"></div>
 </body>
 
 </html>
@@ -212,4 +216,95 @@
   localStorage.setItem("adetail",JSON.stringify(data))
   }
    
+
+
+  let cart_items = JSON.parse(localStorage.getItem("cart_key"));
+  // let main1 = document.getElementById("tag3_left_top");
+  let sgst_p;
+  let cgst_p;
+  let dis_p;
+  let actual_p;
+  let discount_p;
+  let sub_p;
+  let total_p;
+  let p_wot;
+  display(cart_items);
+  function display(cart_items) {
+    sgst_p = 0;
+    cgst_p = 0;
+    dis_p = 0;
+    actual_p = 0;
+    discount_p = 0;
+    sub_p = 0;
+    total_p = 0;
+    p_wot = 0;
+
+    // document.getElementById("items_len").textContent = cart_items.length
+    cart_items.map((el) => {
+      discount_p += (el.price * 10) / 100
+      actual_p += el.price;
+      // console.log(el.price, discount_p)
+    })
+
+    displayPrice()
+  }
+
+
+  function displayPrice() {
+    p_wot = actual_p - discount_p;
+    cgst_p = (actual_p * 5 / 100);
+    sgst_p = (actual_p * 5 / 100);
+
+    // console.log("p_wot:", p_wot);
+    // console.log("cgst_p:", cgst_p);
+    // console.log("sgst_p:", sgst_p);
+    sub_p = p_wot + cgst_p + sgst_p;
+    // console.log("sub_p", sub_p);
+    total_p = sub_p - dis_p;
+    // console.log(total_p);
+    document.getElementById("p_wot").textContent = p_wot.toFixed(2);
+    document.getElementById("p_cgst").textContent = cgst_p.toFixed(2);
+    document.getElementById("p_sgst").textContent = sgst_p.toFixed(2);
+    document.getElementById("sub_total").textContent = sub_p.toFixed(2);
+    document.getElementById("dis_p").textContent = dis_p.toFixed(2);
+
+    document.getElementById("tot_p").textContent = total_p.toFixed(2);
+  }
+  function coupon_apply() {
+    let coupon_code = document.getElementById("e_coupon").value;
+    if (coupon_code == "pai123@5") {
+      dis_p = sub_p * 5 / 100;
+      displayPrice()
+    }
+    else {
+      alert("Invalid coupon code")
+    }
+
+  }
+
 </script>
+<script type="module">
+
+  // -------------------------------importin data                        
+  
+  import navbar from "../script/testnav.js";
+  
+  let container=document.getElementById("p_cont");
+  
+  container.innerHTML=navbar();
+  
+  
+  import footer from "../script/footer.js";
+  
+  let body_footer=document.getElementById("p_foot");
+  
+  body_footer.innerHTML=footer();
+  
+  let devbtn=document.getElementById("devbtn");
+  devbtn.innerText="Login"
+  
+  // ----------------------------------importing end----------------------------------
+  
+  
+  
+  </script>
