@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+
+    </style>
+</head>
+
+<body>
+    <div id="ash_navbox"></div>
+    <div id="ash_box">
+
+
+        <div id="ash_left_content">
+            <div id="ash_buttons">
+                <div id="ash_phone_image">
+                    <div id="stars">
+                        <p>Ratings</p>
+                        <span class="fa fa-star checked "></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+
+
+                </div>
+                <button id="buy_now">Buy Now</button>
+                <button id="ash_cart">Add To Cart</button>
+            </div>
+        </div>
+        <div id="ash_right_content">
+
+
+        </div>
+
+    </div>
+    </div>
+    <div id="ash_foot"></div>
+
+</body>
+
+</html>
+<script type="module">
+    import navbar from "../script/testnav.js";
+
+    var nav = document.getElementById("ash_navbox")
+
+    nav.innerHTML = navbar()
+
+    import footer from '../script/footer.js'
+
+    let devfooter = document.getElementById('ash_foot')
+    devfooter.innerHTML = footer()
+
+
+
+    var mobile_data = JSON.parse(localStorage.getItem('data_obj'));
+
+    console.log(mobile_data)
+
+    append_product(mobile_data)
+       
+
+    function append_product(elem) {
+        // console.log(elem)
+        elem.map((item) => {
+            document.getElementById("ash_phone_image").innerHTML = ""
+            document.getElementById("ash_right_content").innerHTML = ""
+            document.getElementById("ash_cart").addEventListener("click", () => { cart(item) })
+
+            let div1 = document.createElement('div')
+            let div2 = document.createElement('div')
+
+
+            let img = document.createElement('img')
+            img.src = item.image
+            img.style = "width:50%; height:60%; padding-left:120px; padding-top:20px"
+
+            let title = document.createElement('p')
+            title.innerHTML = item.title
+            title.style = "font-size:35px; font-family:sans-serif;line-height:50px"
+            let price = document.createElement('p')
+            price.innerHTML = " Rs " + item.price + ".00 " + "-/-"
+            price.style = "font-size:35px; font-family:sans-serif; color:blue;padding-top:150px"
+
+            let saving = document.createElement('p')
+            saving.innerHTML = "Total Saving  10%"
+            saving.style = "color:green; font-size:25px; font-family:sans-serif;"
+
+            let storage = document.createElement('p')
+            storage.innerHTML = "Storage = 1TB"
+            storage.style = "color:red; font-size:25px; font-family:sans-serif"
+
+            let waranty = document.createElement('p')
+            waranty.innerHTML = "1 Year Waranty"
+            waranty.style = "color:green; font-size:25px; font-family:sans-serif"
+
+            let description = document.createElement('p')
+            description.innerHTML = item.description
+            description.style = "font-size:20px; font-family:sans-serif; line-height:35px; padding-top:50px"
+
+
+
+            div1.append(img)
+            div2.append(title, price, saving, storage, waranty, description)
+
+            document.getElementById("ash_phone_image").append(div1)
+            document.getElementById("ash_right_content").append(div2)
+
+
+        })
+
+
+    }
+
+
+
+
+    function cart(item) {
+        console.log("item")
+        var products = JSON.parse(localStorage.getItem("cart_key")) || [];
+
+
+
+        var cart_obj = {
+
+            image: item.image,
+            title: item.title,
+            description: item.description,
+            price: item.price
+        }
+        products.push(cart_obj)
+
+        //  console.log(products)
+
+        localStorage.setItem("cart_key", JSON.stringify(products))
+
+          window.location.href="cart.html"
+
+
+    }
+</script>

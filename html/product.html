@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="../style/product.css">
+   <!-- <link rel="stylesheet" href="../style/testnav.css"> -->
+   <!-- <link rel="stylesheet" href="../style/footer.css"> -->
+</head>
+
+<body>
+    <div id="navbox"></div>
+    <div id="ash_container">
+        
+        <div id="ash_side_bar">
+            <div id="ash_filter">
+                <h3>Filters</h3>
+                <p> clear filter</p>
+            </div>
+            <hr>
+            <div id="ash_categories">
+                <p>Categories</p>
+                <i class="fa fa-angle-down" style="font-size:24px"></i>
+            </div>
+            <hr>
+            <div id="ash_categories_none">
+                <p>Feature Phones</p>
+                <p>Smart Phones</p>
+                <p>TABLETS</p>
+            </div>
+
+            <div id="ash_pricing">
+                <p>Pricing</p>
+                <i class="fa fa-angle-down" style="font-size:24px"></i>
+            </div>
+            <div id="ash_pricing_none">
+                <input type="range" min="1" max="5000" id="slide" value="5000">
+            </div>
+            <hr>
+            <div id="ash_brands">
+                <p>Brands</p>
+                <i class="fa fa-angle-down" style="font-size:24px"></i>
+            </div>
+            <hr>
+            <div id="ash_brands_none">
+
+                <input type="checkbox"> 
+                <label>Lenovo</label><br>
+                <input type="checkbox">
+                <label>Nokia</label><br>
+                <input type="checkbox">
+                <label>Samsung</label><br>
+                <input type="checkbox">
+                <label>Phillips</label>
+
+
+            </div>
+        </div>
+
+
+        <div id="ash_content">
+            <div id="ash_content_navbar">
+                <p>Items 1-20 of 138</p>
+                <select id="ash_sort">
+                    <option >Sort by price</option>
+                    <option value="low">Low to High</option>
+                    <option value="high">high to low</option>
+                </select>
+                <select id="ash_pages">
+                    <option value="show : 20 per page"> show : 20 per page</option>
+                    <option value="show : 30 per page">show : 30 per page</option>
+                </select>
+            </div>
+            <div id ="ash_product_content">
+                <div id="ash_left_content">
+                    <div id="ash_description"></div>
+                   
+                </div>
+               
+                
+            </div>
+        </div>
+    </div>
+    <div id="ash_footer"></div>
+
+</body>
+
+</html>
+<script type="module">
+   
+
+import navbar from "../script/testnav.js";
+
+var nav=document.getElementById("navbox")
+
+ nav.innerHTML = navbar()
+
+import footer from '../script/footer.js'
+let devfooter = document.getElementById('ash_footer')
+devfooter.innerHTML = footer()
+
+
+
+
+    var flag=true
+    var categories_div=document.getElementById("ash_categories").addEventListener("click",slide)
+    var pricing_div=document.getElementById("ash_pricing").addEventListener("click",slide_pricing)
+    var brands_div=document.getElementById("ash_brands").addEventListener("click",slide_brands)
+    
+
+     function slide(){
+         
+
+         if(flag){ 
+             flag=false
+             console.log("false")
+             document.getElementById("ash_categories_none").style="display:block"
+         }else {
+             flag=true
+             console.log("true")
+             
+             document.getElementById("ash_categories_none").style="display:none"
+             
+            
+         }
+         }
+
+         function slide_pricing(){
+             
+         if(flag){ 
+             flag=false
+             
+             document.getElementById("ash_pricing_none").style="display:block"
+             
+              
+         }else {
+             flag=true
+            
+             
+             document.getElementById("ash_pricing_none").style="display:none"
+             
+            
+         }
+         }
+         function slide_brands(){
+          
+                
+         if(flag){ 
+             flag=false
+             
+             document.getElementById("ash_brands_none").style="display:block"
+             
+              
+         }else {
+             flag=true
+            
+             
+             document.getElementById("ash_brands_none").style="display:none"
+             
+            
+         }
+            
+         }
+    
+        
+       
+  
+    var data=JSON.parse(localStorage.getItem("key"))
+    console.log(data)
+   
+   
+        append_data(data)
+        document.getElementById("ash_sort").addEventListener("change",()=>{
+            filter(data);
+        })
+        
+  
+    
+    
+    function append_data(tab){
+        document.getElementById("ash_left_content").innerHTML=""
+        tab.map((elem)=>{
+            
+            
+            let div=document.createElement("div");
+            div.setAttribute("id","ash_appended_data");
+            div.addEventListener("click",()=>{
+
+                response(elem)
+            })
+
+
+            var img=document.createElement("img");
+            img.src=elem.image
+            img.style="width:200px; height:200px"
+
+            var title=document.createElement("p")
+            title.innerHTML=elem.title
+            title.style="font-family:sans-serif; padding-top:60px; font-size:20px;padding-left:30px"
+
+             
+
+            let p = document.createElement("p")
+            p.innerHTML="Free delivery by PAI"
+            p.style="font-family:sans-serif; padding-top:20px; color:red"
+
+            let description=document.createElement("p")
+            description.innerHTML=elem.description
+
+            
+
+            let price=document.createElement("p")
+            price.innerHTML= " Rs "+ elem.price
+            price.style="font-size:30px; padding-right:20px;padding-top:20px; color:red"
+            
+              div.append(img,title,price)
+             document.getElementById("ash_left_content").append(div)   
+           
+        })
+
+    }
+    
+
+      
+
+  function filter(data){
+      var select=document.getElementById("ash_sort").value
+
+      if(select=="low"){
+          data.sort((a,b)=>{
+              return a.price-b.price
+          })
+          append_data(data)
+      }
+     else if(select=="high"){
+        data.sort((a,b)=>{
+              return b.price-a.price
+          })
+          append_data(data)
+  }
+  }
+
+
+
+         
+   
+         
+  function response(mobile){
+       console.log(mobile)
+       var arr=  []
+     
+      
+       var obj={
+           image:mobile.image,
+           title:mobile.title,
+           description:mobile.description,
+           price:mobile.price
+       }
+        arr.push(obj)
+       
+
+       localStorage.setItem("data_obj",JSON.stringify(arr))
+
+         window.location.href="product_description.html"
+    
+  }
+
+
+
+
+         
+     
+
+</script>

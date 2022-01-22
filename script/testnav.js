@@ -37,13 +37,13 @@ function navbar(){
             </li>
             <div class="dropdown">
                 <button class="dropbtn">
-                    <a id="devassesories"> <img
+                    <a > <img  id="devassesories" 
                             src="https://www.paiinternational.in/static/assets/pai/images/cate-icon.png" alt="">
                         Select Catogery</a>
                 </button>
                 <div class="dropdown-content">
                     <a href="">Furniture</a>
-                    <a href="">Mobile and Tablet</a>
+                    <a  >Mobile and Tablet</a>
                     <a href="">Home Appliance</a>
                     <a href="">Kichen Appliances</a>
                     <a href="">Laptop & IT</a>

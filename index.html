@@ -329,9 +329,9 @@
         try {
             var res = await fetch("https://fakestoreapi.com/products/category/electronics")
             var data = await res.json()
-            console.log('data:', data)
+            console.log('data:',data)
             localStorage.setItem("key", JSON.stringify(data))
-            window.location = "./product.html";
+         window.location.href= "./html/product.html";
         }
         catch (error) {
             console.log(error)
@@ -375,6 +375,10 @@
     import footer from '../script/footer.js'
     let devfooter = document.getElementById('footer')
     devfooter.innerHTML = footer()
+
+
+
+
 
 
 
