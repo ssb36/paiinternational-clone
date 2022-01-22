@@ -62,6 +62,30 @@
     devfooter.innerHTML = footer()
 
 
+    
+  // -------------------------------display name---------------------
+
+  let displayNameOfUser=JSON.parse(localStorage.getItem("displayNameOfUser"));
+  console.log('displayNameOfUser:', displayNameOfUser)
+
+
+  if(displayNameOfUser==null){
+      devbtn.innerText="Login";
+  }
+  else{
+      let devbtn=document.getElementById("devbtn");
+      devbtn.innerText=`Welcome ${displayNameOfUser}`;
+      devbtn.style.backgroundColor="#ee7f1a";
+      
+  }
+  
+
+
+// localStorage.removeItem(displayNameOfUser)
+
+
+
+
 
     var mobile_data = JSON.parse(localStorage.getItem('data_obj'));
 
@@ -121,6 +145,8 @@
 
 
     }
+
+    
 
 
 
