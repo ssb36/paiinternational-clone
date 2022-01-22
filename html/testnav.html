@@ -18,7 +18,7 @@
 </html>
 <script type="module">
 import navbar from '../script/testnav.js'
-console.log('navbar:', navbar)
+// console.log('navbar:', navbar)
 
 
 
@@ -26,14 +26,16 @@ console.log('navbar:', navbar)
 let container = document.getElementById('container')
 container.innerHTML = navbar()
     var devacce = document.getElementById('devassesories').addEventListener('click', ShowAcees)
-
+    //   console.log(devacce)
     async function ShowAcees() {
+
+       
         try {
             var res = await fetch("https://fakestoreapi.com/products/category/electronics")
             var data = await res.json()
             console.log('data:', data)
             localStorage.setItem("key", JSON.stringify(data))
-            window.location = "./product.html";
+             window.location.href = "product.html";
         }
         catch (error) {
             console.log(error)

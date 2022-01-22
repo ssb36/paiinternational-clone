@@ -1,5 +1,11 @@
+*{
+  margin:0px;
+  box-sizing: border-box;
+}
 body {
   background-color: snow;
+  padding: 0px 10px;
+  display: grid;
 }
 /* #tag3_left_top>#items_div{
 background-color: teal;
@@ -8,10 +14,17 @@ width: 500px;
 border: 1px solid black;
 } */
 #dmain {
-  width: 97%;
-  height: 600px;
-  /* border: 1px solid red; */
+  padding-top: 220px;
+  width: 100%;
+ 
+  border: 1px solid red;
   margin: auto;
+  
+}
+#container{
+  width: 98%;
+  position:fixed;
+  
 }
 
 #tag1 {
@@ -86,7 +99,7 @@ border: 1px solid black;
 
 #tag3 {
   display: flex;
-  height: 500px;
+  height: auto;
   gap: 7px;
 }
 
@@ -114,7 +127,7 @@ border: 1px solid black;
   flex: 1;
   /* border: 1px solid blueviolet; */
   margin-left: 25px;
-  line-height: 10px;
+  line-height: 18px;
 }
 
 #tag3_left_btm > div > img {
@@ -223,7 +236,7 @@ border: 1px solid black;
   /* border: 1px solid black; */
   margin-left: 4%;
   /* background-color: teal; */
-  line-height: 11px;
+  line-height: 24px;
 }
 
 #tag3_right_bottom > #top > #left > p {
@@ -247,7 +260,7 @@ border: 1px solid black;
 #tag3_right_bottom > #top > #right {
   width: 30%;
   /* border: 1px solid black; */
-  line-height: 11px;
+  line-height: 24px;
 }
 
 #checkout {
@@ -293,7 +306,7 @@ border: 1px solid black;
 
 #item_div > :nth-child(2) {
   width: 60%;
-  line-height: 14px;
+  line-height: 24px;
 }
 
 #item_div > :nth-child(2) > :nth-child(1) {
@@ -316,21 +329,30 @@ border: 1px solid black;
   margin-top: 30px;
 }
 
-#item_div > :nth-child(3) > :nth-child(1),
-#item_div > :nth-child(3) > :nth-child(3) {
+#item_div > :nth-child(3) > :nth-child(1) {
   border: 1px solid grey;
   height: 30px;
   width: 30px;
   border-radius: 50%;
   box-sizing: border-box;
-  padding-bottom: 13px;
+  /* padding-bottom: 10px; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+#item_div > :nth-child(3) > :nth-child(3){
+  border: 1px solid grey;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #item_div > :nth-child(3) > :nth-child(1) > span {
-  font-size: 60px;
+  font-size: 40px;
 }
 
 #item_div > :nth-child(3) > :nth-child(2) {
@@ -371,6 +393,9 @@ border: 1px solid black;
 #item_div > :nth-child(4) > span {
   color: red;
   font-size: 17px;
-
+cursor: pointer;
   font-weight: bold;
+}
+button{
+  cursor: pointer;
 }
