@@ -1,4 +1,7 @@
 
+localStorage.removeItem("displayNameOfUser")
+
+
 let arr_of_details = JSON.parse(localStorage.getItem("user_reg_details")) || [];
 
 // console.log('arr_of_details:', arr_of_details);
@@ -96,6 +99,7 @@ let reg_details = () => {
 };
 
 
+
 let alert_function=()=>{
     alert("Registration Success");
 }
@@ -146,7 +150,8 @@ let check_user=(arr,name,psd)=>{
            
             setTimeout(()=>{
                 alert("Login Succesfull");
-                window.location.href="/index.html";
+                localStorage.setItem("displayNameOfUser",JSON.stringify(elem.first_name));
+                window.location.href="../index.html";
             },2000);
 
            count=1;
@@ -164,3 +169,5 @@ let check_user=(arr,name,psd)=>{
 }
 
 // ----------------------login done -----------------------------------------
+
+

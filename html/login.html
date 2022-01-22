@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="../style/testnav.css"/>
+    <link rel="stylesheet" href="../style/footer.css"/>
     <link rel="stylesheet" href="../style/login.css" />
     <script
       src="https://kit.fontawesome.com/683b4b40e3.js"
@@ -12,6 +14,7 @@
     ></script>
   </head>
   <body>
+    <div id="container"></div>
     <div id="login_body">
       <div id="home_login">
         <h4 ><a id="home_color" href="/index.html">Home</a></h4>
@@ -34,7 +37,7 @@
                 <i class="fab fa-google"></i>
               </div>
               <div class="low_length" id="or">
-                <hr />
+                <hr id="hr"/>
               </div>
               <div class="input_grid">
                 <label>Username <span class="red_star">*</span></label>
@@ -166,7 +169,34 @@
         </div>
       </div>
     </div>
+    <div id="footer"></div>
   </body>
 </html>
 
-<script src="/script/login.js"></script>
+<script src="../script/login.js"></script>
+
+<script type="module">
+
+// -------------------------------importin data                        
+
+import navbar from "../script/testnav.js";
+
+let container=document.getElementById("container");
+
+container.innerHTML=navbar();
+
+
+import footer from "../script/footer.js";
+
+let body_footer=document.getElementById("footer");
+
+body_footer.innerHTML=footer();
+
+let devbtn=document.getElementById("devbtn");
+devbtn.innerText="Login"
+
+// ----------------------------------importing end----------------------------------
+
+
+
+</script>

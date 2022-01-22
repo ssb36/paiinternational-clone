@@ -3,12 +3,21 @@
   margin:0px;
   box-sizing: border-box;
 }
+body{
+  display: grid;
+  padding: 0px 15px;
+}
 #login_body {
   display: grid;
   grid-template-rows: 30px 600px;
   font-size: 14px;
-  padding: 20px;
-  border: 2px solid red;
+  padding:20px;
+  padding-top: 250px;
+}
+#container{
+  width: 98%;
+  position:fixed;
+  
 }
 #home_login {
   display: flex;
@@ -18,6 +27,9 @@
   padding: 0px 6px;
   color: #484848;
   padding-left: 20px;
+}
+#home_login>h3{
+  margin-top: -30px;
 }
 #home_color{
   text-decoration: none;
@@ -176,7 +188,7 @@
 
 /* or line */
 
-hr {
+#hr {
   border: none;
   border-top: 1px solid rgba(51, 51, 51, 0.39);
   color: rgba(51, 51, 51, 0.712);
@@ -185,7 +197,7 @@ hr {
   height: 5px;
 }
 
-hr:after {
+#hr:after {
   background: #fff;
   content: "OR";
   padding: 0 5px;
@@ -198,6 +210,13 @@ hr:after {
   display: none;
   color: red;
 }
+
+
+#footer{
+  width: 110%;
+  margin:0px -20px;
+}
+
 
 
 /* Media query starts */

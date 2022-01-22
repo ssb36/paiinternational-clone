@@ -320,6 +320,23 @@ p{
     margin: 20px 50px;
 
 }
+.pay{
+    text-decoration: none;
+    color: black;
+}
+.pay2{
+    color: white;
+    background-color: #EF7F1A;
+}
+.paybtn{
+    padding: 13px 28px;
+    color: white;
+    background-color: #EF7F1A;
+    border: none;
+    margin-top: 25px;
+    margin-left: 85%;
+    border-radius: 5px;
+}
 @media only screen and(min-width:0px) and(max-width:600px) {
   .bottom{
       display: grid;

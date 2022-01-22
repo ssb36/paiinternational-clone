@@ -17,7 +17,7 @@ function navbar(){
         </div>
 
 
-        <div id="devlogin"><button id="devbtn">Login</button></div>
+        <div id="devlogin"><a href="../html/login.html" id="devbtn"></a></div>
         <div id="devcart"><img src="https://www.paiinternational.in/static/assets/pai/images/cart-icon.png" alt="">
         </div>
 
@@ -58,8 +58,8 @@ function navbar(){
             <li> <a href="#"> <img src="https://www.paiinternational.in/static/assets/pai/images/luckydraw.png"
                         alt=""> Draw Results</a> </li>
             <li> <a href="#"> <img src="../res/deals (1).png" alt=""> Deals Zone</a> </li>
-            <li> <a href="#"><img src="../res/store-locator (1).png" alt=""> store-locator</a> </li>
-            <li> <a href="#"><img src="../res/services (1).png" alt=""> Services</a> </li>
+            <li> <a href="../html/map.html"><img src="../res/store-locator (1).png" alt=""> store-locator</a> </li>
+            <li> <a href="../html/services.html"><img src="../res/services (1).png" alt=""> Services</a> </li>
             <li id="devappdownload"> <a href="#"><img src="../res/app-icon (1).png" alt=""> Download App</a> </li>
         </ul>
     </nav>

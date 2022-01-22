@@ -4,22 +4,33 @@
     box-sizing: border-box;
 }
 body{
-   min-height: 100vh;
     padding-bottom: 50px;
+    overflow:scroll;
+    display: grid;
+    padding:0px 15px;
 }
+#container{
+    width: 98%;
+    position:fixed;
+  }
+
 #services_home_head{
     display: grid;
     height: 100%;
     grid-template-rows: 6% 90%;
+    padding-top: 250px;
 }
 #services_home{
     display: flex;
     height: 100%;
-    align-items: center;
     gap: 5px;
     padding: 0px 6px;
     color: #484848;
-    
+    align-items: center;
+}
+
+#services_home>h3{
+    margin-top: -30px;
 }
 #sevices_color{
     color: #ef7f1a;
@@ -55,4 +66,9 @@ body{
 }
 #services_h1_tag{
     margin-bottom: 10px;
+}
+
+#footer{
+    width: 110%;
+    margin:0px -20px;
 }
