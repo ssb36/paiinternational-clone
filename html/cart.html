@@ -135,8 +135,34 @@ devbtn.innerText="Login"
    
     // ----------------------------------importing end----------------------------------
     
+<<<<<<< HEAD
     document.getElementById("checkout").addEventListener("click",goto_checkout)
     function goto_checkout(){
         window.location.href="checkout.html";
     }
+=======
+    
+
+  // -------------------------------display name---------------------
+
+  let displayNameOfUser=JSON.parse(localStorage.getItem("displayNameOfUser"));
+  console.log('displayNameOfUser:', displayNameOfUser)
+
+
+  if(displayNameOfUser==null){
+      devbtn.innerText="Login";
+  }
+  else{
+      let devbtn=document.getElementById("devbtn");
+      devbtn.innerText=`Welcome ${displayNameOfUser}`;
+      devbtn.style.backgroundColor="#ee7f1a";
+  }
+  
+
+
+// localStorage.removeItem(displayNameOfUser)
+
+
+    
+>>>>>>> 147cefa84ccbcce62932f04e392a09e3580cb0e0
     </script>

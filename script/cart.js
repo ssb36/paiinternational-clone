@@ -106,6 +106,7 @@ function remove(index) {
     main1.innerHTML = null;
     display(cart_items);
 }
+
 function displayPrice() {
     p_wot = actual_p - discount_p;
     cgst_p = (actual_p * 5 / 100);

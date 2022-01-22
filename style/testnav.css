@@ -1,76 +1,75 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-} 
-.devmain{
-    width: 100%;
-    height: 10%;
-    background-color: #ee7f1a;
-    border-radius: 20px;
-    padding: 10px;
-    padding-right:20px;
+  font-family: "Poppins", sans-serif;
 }
-.devbox2{
-    display: flex;
-    width: 100%;
-    height: 2%;
-   
+.devmain {
+  width: 100%;
+  height: 10%;
+  background-color: #ee7f1a;
+  border-radius: 20px;
+  padding: 10px;
+  padding-right: 20px;
 }
-.devbox1{
-    display: flex;
-    column-gap: 60px;
-    margin-left: 10px;
-    line-height: 55px;
-    
+.devbox2 {
+  display: flex;
+  width: 100%;
+  height: 2%;
 }
-#devlogin{
-    margin-left: 600px;
-    
+.devbox1 {
+  display: flex;
+  column-gap: 60px;
+  margin-left: 10px;
+  line-height: 55px;
 }
-#devbtn{
-    padding: 6px 25px;
-    margin-top: 20px;
-    color: white;
-    background-color: darkslateblue;
-    font-weight: bolder;
-    border-radius: 5px;
-    border: 1px solid transparent;
-    text-decoration: none;
+#devlogin {
+  margin-left: 600px;
+  align-items:flex-start;
+  justify-content:left;
+  display: flex;
+  border: 1px solid transparent;
+}
+#devbtn {
+  padding: 0px 25px;
+  margin-top: 20px;
+  color: white;
+  background-color: darkslateblue;
+  font-weight: bolder;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  height: 50px;
+  
+}
+#devlocation {
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+}
+#devinput {
+  padding: 20px;
+  margin-top: 18px;
+  border-style: none;
+  border-radius: 5px;
+  height: 25%;
+  width: 200%;
+  margin-left: 100px;
+}
+#devcart {
+  margin-left: auto;
+  margin-top: 20px;
+  margin-right: 10px;
+}
 
+#devlogo {
+  margin-top: 20px;
 }
-#devlocation{
-    margin-top: 20px;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 15px;
-   
-    
-}
-#devinput{
-    padding: 20px;
-    margin-top: 18px;
-   border-style: none;
-   border-radius: 5px;
-height: 25%;
-width: 200%;
-margin-left: 100px;
-
-}
-#devcart{
-    margin-left: auto;
-    margin-top: 20px;
-}
-
-
-#devlogo{
-    margin-top: 20px;
-}
-nav{
+nav {
   display: flex;
   height: 80px;
   width: 100%;
@@ -80,20 +79,20 @@ nav{
 
   flex-wrap: wrap;
 }
-nav .logo{
+nav .logo {
   color: #fff;
   font-size: 35px;
   font-weight: 600;
 }
-nav ul{
+nav ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
 }
-nav ul li{
+nav ul li {
   margin: 0 5px;
 }
-nav ul li a{
+nav ul li a {
   color: #f2f2f2;
   text-decoration: none;
   font-size: 16px;
@@ -105,30 +104,29 @@ nav ul li a{
 }
 
 nav ul li a.active,
-nav ul li a:hover{
+nav ul li a:hover {
   color: #111;
-  
 }
-nav .menu-btn i{
+nav .menu-btn i {
   color: #fff;
   font-size: 22px;
   cursor: pointer;
   display: none;
 }
-input[type="checkbox"]{
+input[type="checkbox"] {
   display: none;
 }
-#devcartno{
+#devcartno {
   margin-top: 33px;
   margin-left: 270px;
   display: none;
 }
-.dropdown{
+.dropdown {
   color: white;
   text-decoration: none;
 }
 .dropdown .dropbtn {
-  font-size: 16px;  
+  font-size: 16px;
   border: none;
   outline: none;
   color: white;
@@ -142,7 +140,7 @@ input[type="checkbox"]{
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -162,29 +160,28 @@ input[type="checkbox"]{
 .dropdown:hover .dropdown-content {
   display: block;
 }
-@media (max-width: 1000px){
-  nav{
+@media (max-width: 1000px) {
+  nav {
     padding: 0 40px 0 50px;
   }
-  
 }
 @media (max-width: 920px) {
-  nav .menu-btn i{
+  nav .menu-btn i {
     display: block;
   }
-  #click:checked ~ .menu-btn i:before{
+  #click:checked ~ .menu-btn i:before {
     content: "\f00d";
   }
-  #devassesories{
+  #devassesories {
     color: black;
     font-size: 20px;
   }
-  #devcartno{
+  #devcartno {
     margin-top: 33px;
     margin-left: end;
-   display: block;
+    display: block;
   }
-  nav ul{
+  nav ul {
     position: fixed;
     top: 80px;
     left: -100%;
@@ -197,14 +194,14 @@ input[type="checkbox"]{
     transition: all 0.3s ease;
     font-family: sans-serif;
   }
-  #click:checked ~ ul{
+  #click:checked ~ ul {
     left: 0;
   }
-  nav ul li{
+  nav ul li {
     width: 100%;
     margin: 40px 0;
   }
-  nav ul li a{
+  nav ul li a {
     width: 100%;
     margin-left: -100%;
     display: block;
@@ -212,31 +209,29 @@ input[type="checkbox"]{
     transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     color: black;
   }
-  #click:checked ~ ul li a{
+  #click:checked ~ ul li a {
     margin-left: 0px;
   }
   nav ul li a.active,
-  nav ul li a:hover{
+  nav ul li a:hover {
     background: none;
     color: red;
   }
 
-#devlocation{
+  #devlocation {
     display: none;
-}
-#devsearch{
+  }
+  #devsearch {
     padding: 2px;
     width: 50%;
     left: 0;
     display: none;
-  
+  }
+  #devcart {
+    margin-left: 0px;
+  }
 }
-#devcart{
-margin-left: 0px;
-}
-
-}
-.content{
+.content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -247,7 +242,7 @@ margin-left: 0px;
   padding: 0 30px;
   color: #1b1b1b;
 }
-.content div{
+.content div {
   font-size: 40px;
   font-weight: 700;
 }

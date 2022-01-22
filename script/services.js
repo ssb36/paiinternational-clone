@@ -26,7 +26,8 @@ body_footer.innerHTML=footer();
   }
   else{
       let devbtn=document.getElementById("devbtn");
-      devbtn.innerText=displayNameOfUser;
+      devbtn.innerText=`Welcome ${displayNameOfUser}`;
+      devbtn.style.backgroundColor="#ee7f1a";
   }
   
 
