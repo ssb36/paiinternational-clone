@@ -7,17 +7,12 @@ body {
   padding: 0px 10px;
   display: grid;
 }
-/* #tag3_left_top>#items_div{
-background-color: teal;
-height: 50px;
-width: 500px;
-border: 1px solid black;
-} */
+
 #dmain {
   padding-top: 220px;
   width: 100%;
  
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin: auto;
   
 }
@@ -388,6 +383,7 @@ border: 1px solid black;
   width: 20px;
   height: 16px;
   margin-right: 1px;
+  margin-top: 3px;
 }
 
 #item_div > :nth-child(4) > span {
@@ -395,6 +391,8 @@ border: 1px solid black;
   font-size: 17px;
 cursor: pointer;
   font-weight: bold;
+  /* padding-top: 0px; */
+ 
 }
 button{
   cursor: pointer;

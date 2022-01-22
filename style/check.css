@@ -155,13 +155,14 @@ center{
 #copbtn{
     width: auto;
     height: 32px;
-    padding-top: 1% ;
-    padding-left: 1.5%;
+    /* padding-top: 1% ;
+    padding-left: 1.5%; */
     color: white;
     box-sizing: border-box;
     display: inline-block;
     background-color: #EF7F1A; ;  
     border: none; 
+    padding: 8px 15px;
 }
 .copcode > input{
     height: 32px;
@@ -175,9 +176,16 @@ center{
     padding: 20px;  
     
 }
+.itepr>:nth-child(1){
+    width: 80%;
+}
+.itepr>:nth-child(2){
+    width: 20%;
+}
 .itepr{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+   
 }
 p{
   font-size: 17px; 
