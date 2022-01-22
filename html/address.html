@@ -29,7 +29,9 @@
             <span>Login or Signup</span>
           </div>
           <div class="colb">
-            <input type="text" placeholder="name"> <input type="text" placeholder="phone">
+            <!-- <input type="text" placeholder="name"> <input type="text" placeholder="phone"> -->
+            <span id="p_login_name"></span>
+            <span id="p_login_number"></span>
           </div>
         </div>
 
@@ -243,7 +245,18 @@
   
   // ----------------------------------importing end----------------------------------
   
-  
+  var p_checkout=JSON.parse(localStorage.getItem("user_reg_details"));
+
+console.log(p_checkout)
+
+var login_name=document.getElementById("p_login_name")
+login_name.innerHTML=p_checkout[p_checkout.length-1].first_name 
+login_name.style="margin-left:20px; font-weight:bold; font-size:20px; font-family:sans-serif; "
+
+var login_number=document.getElementById("p_login_number")
+login_number.innerHTML= p_checkout[p_checkout.length-1].reg_number
+login_number.style="margin-left:20px; font-weight:bold; font-size:20px;font-family:sans-serif;"
+
   
   </script>
   <script src="../script/check.js">
