@@ -93,8 +93,8 @@ function display(cart_items) {
             qty--;
             span32.textContent = qty;
               b1.textContent = `Qty:${qty}`;
-              discount_p -= (qty*el.price * 10) / 100;
-              actual_p -= qty * el.price;
+              discount_p -= (el.price * 10) / 100;
+              actual_p -=   el.price;
               displayPrice();
         }
      
