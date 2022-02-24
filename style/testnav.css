@@ -95,6 +95,7 @@ nav ul li {
 nav ul li a {
   color: #f2f2f2;
   text-decoration: none;
+  margin-inline: 13px;
   font-size: 16px;
   font-weight: 500;
   padding: 8px 15px;

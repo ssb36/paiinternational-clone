@@ -43,7 +43,7 @@ function navbar(){
                 </button>
                 <div class="dropdown-content">
                     <a href="">Furniture</a>
-                    <a  >Mobile and Tablet</a>
+                    <a  href="" >Mobile and Tablet</a>
                     <a href="">Home Appliance</a>
                     <a href="">Kichen Appliances</a>
                     <a href="">Laptop & IT</a>
