@@ -1,7 +1,6 @@
 {
   "name": "paiinternational-clone",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -26,5 +25,6 @@
   "bugs": {
     "url": "https://github.com/ssb36/paiinternational-clone/issues"
   },
-  "homepage": "https://github.com/ssb36/paiinternational-clone#readme"
+  "homepage": "https://github.com/ssb36/paiinternational-clone#readme",
+  "description": ""
 }

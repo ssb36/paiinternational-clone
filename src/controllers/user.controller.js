@@ -166,7 +166,7 @@ router.post("",
 
             console.log("coming to login");
 
-            return res.render("index.ejs")
+            return res.redirect("/home");
 
             // res.send({token });
         } catch (err) {
