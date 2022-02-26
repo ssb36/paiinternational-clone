@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="../style/product.css">
    <!-- <link rel="stylesheet" href="../style/testnav.css"> -->
    <!-- <link rel="stylesheet" href="../style/footer.css"> -->
@@ -22,18 +25,18 @@
                 <p> clear filter</p>
             </div>
             <hr>
-            <div id="ash_categories">
+            <div id="ash_categories" class="tag">
                 <p>Categories</p>
                 <i class="fa fa-angle-down" style="font-size:24px"></i>
             </div>
             <hr>
-            <div id="ash_categories_none">
+            <div id="ash_categories_none" class="tag-items red">
                 <p>Feature Phones</p>
                 <p>Smart Phones</p>
                 <p>TABLETS</p>
             </div>
 
-            <div id="ash_pricing">
+            <div id="ash_pricing" class="tag">
                 <p>Pricing</p>
                 <i class="fa fa-angle-down" style="font-size:24px"></i>
             </div>
@@ -41,12 +44,12 @@
                 <input type="range" min="1" max="5000" id="slide" value="5000">
             </div>
             <hr>
-            <div id="ash_brands">
+            <div id="ash_brands" class="tag">
                 <p>Brands</p>
                 <i class="fa fa-angle-down" style="font-size:24px"></i>
             </div>
             <hr>
-            <div id="ash_brands_none">
+            <div id="ash_brands_none" class="tag-items">
 
                 <input type="checkbox"> 
                 <label>Lenovo</label><br>
@@ -75,11 +78,9 @@
                     <option value="show : 30 per page">show : 30 per page</option>
                 </select>
             </div>
-            <div id ="ash_product_content">
-                <div id="ash_left_content">
-                    <div id="ash_description"></div>
-                   
-                </div>
+            <div class="products">
+                
+            </div>
                
                 
             </div>
@@ -203,47 +204,70 @@ devfooter.innerHTML = footer()
     
     
     function append_data(tab){
-        document.getElementById("ash_left_content").innerHTML=""
+        document.querySelector(".products").innerHTML = '';
         tab.map((elem)=>{
-            
-            
-            let div=document.createElement("div");
-            div.setAttribute("id","ash_appended_data");
-            div.addEventListener("click",()=>{
 
+            let product = document.createElement("div")
+            product.classList.add('ash_product')
+
+            let element = `
+                    <div class="ash_product_image_container">
+                       <img src="${elem.image}" class="ash_product_image">
+                    </div>
+                    <div class="ash_product_description">
+                    <h2>${elem.title}</h2>
+                    <div class="stars"></div>
+                    <p class="ash_description">${elem.description}</p>
+                    <p class="pai_product">Free delivery by PAI</p>
+                    </div>
+                    <div class="ash_product_pricing">
+                        <h1>&#x20B9;${elem.price}</h1>
+                        <p class="ash_discount">&#x20B9;599</p>
+                        <p class="ash_stock">In-Stock</p>
+                    </div>
+            `
+            
+
+            product.innerHTML = element;
+            product.addEventListener("click",()=>{
                 response(elem)
             })
 
+            document.querySelector(".products").append(product)
+            
 
-            var img=document.createElement("img");
-            img.src=elem.image
-            img.style="width:200px; height:200px"
 
-            var title=document.createElement("p")
-            title.innerHTML=elem.title
-            title.style="font-family:sans-serif; padding-top:60px; font-size:20px;padding-left:30px"
+        //     var img=document.createElement("img");
+        //     img.src=elem.image
+        //     img.style="width:200px; height:200px"
+
+        //     var title=document.createElement("p")
+        //     title.innerHTML=elem.title
+        //     title.style="font-family:sans-serif; padding-top:60px; font-size:20px;padding-left:30px"
 
              
 
-            let p = document.createElement("p")
-            p.innerHTML="Free delivery by PAI"
-            p.style="font-family:sans-serif; padding-top:20px; color:red"
+        //     let p = document.createElement("p")
+        //     p.innerHTML="Free delivery by PAI"
+        //     p.style="font-family:sans-serif; padding-top:20px; color:red"
 
-            let description=document.createElement("p")
-            description.innerHTML=elem.description
+        //     let description=document.createElement("p")
+        //     description.innerHTML=elem.description
 
             
 
-            let price=document.createElement("p")
-            price.innerHTML= " Rs "+ elem.price
-            price.style="font-size:30px; padding-right:20px;padding-top:20px; color:red"
+        //     let price=document.createElement("p")
+        //     price.innerHTML= " Rs "+ elem.price
+        //     price.style="font-size:30px; padding-right:20px;padding-top:20px; color:red"
             
-              div.append(img,title,price)
-             document.getElementById("ash_left_content").append(div)   
+        //       div.append(img,title,price)
+        //      document.getElementById("ash_left_content").append(div)   
            
-        })
+        // })
 
-    }
+    })
+}
+
     
 
       
@@ -298,7 +322,7 @@ function cart(){
 
     window.location.href="../html/cart.html"
 
-
+}
 
 
          
