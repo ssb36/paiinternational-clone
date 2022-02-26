@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <link rel="stylesheet" href="../style/testnav.css"/>
-    <link rel="stylesheet" href="../style/footer.css"/>
-
-    <link rel="stylesheet" href="/style/map.css"/>
+    <link rel="stylesheet" href="style/testnav.css"/>
+    <link rel="stylesheet" href="style/footer.css"/>
+    <link rel="stylesheet" href="style/map.css"/>
     <script
       src="https://kit.fontawesome.com/683b4b40e3.js"
       crossorigin="anonymous"
@@ -18,12 +17,12 @@
 
   </head>
   <body>
-    <div id="div_container"></div>
+    <%- include("partials/nav.ejs") %>
     <div id="container">
       <div id="home_locator">
-        <h4><a id="home_head" href="../index.html">Home</a></h4>
+        <h4><a id="home_head" href="http://localhost:5502/home">Home</a></h4>
         <h4>></h4>
-        <h4><a href="../html/map.html" id="home_store">Store Locator</a></h4>
+        <h4><a href="http://localhost:5502/map" id="home_store">Store Locator</a></h4>
       </div>
       <div id="map_flex">
         <div id="map">
@@ -85,8 +84,8 @@
         </div>
       </div>
     </div>
-    <div id="footer"></div>
+    <%- include("partials/footer.ejs") %>
   </body>
 </html>
 
-<script src="/script/map.js" type="module"></script>
+<script src="../public/script/map.js"></script>

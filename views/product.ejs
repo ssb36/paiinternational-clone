@@ -10,13 +10,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="../style/product.css">
-   <!-- <link rel="stylesheet" href="../style/testnav.css"> -->
-   <!-- <link rel="stylesheet" href="../style/footer.css"> -->
+   <link rel="stylesheet" href="style/product.css">
+   <link rel="stylesheet" href="style/testnav.css"> 
+    <link rel="stylesheet" href="style/footer.css"> 
 </head>
 
 <body>
-    <div id="navbox"></div>
+    <%- include("partials/nav.ejs") %>
     <div id="ash_container">
         
         <div id="ash_side_bar">
@@ -86,23 +86,23 @@
             </div>
         </div>
     </div>
-    <div id="ash_footer"></div>
-
+    
+    <%- include("partials/footer.ejs") %>
 </body>
 
 </html>
 <script type="module">
    
 
-import navbar from "../script/testnav.js";
+// import navbar from "../script/testnav.js";
 
-var nav=document.getElementById("navbox")
+// var nav=document.getElementById("navbox")
 
- nav.innerHTML = navbar()
+//  nav.innerHTML = navbar()
 
-import footer from '../script/footer.js'
-let devfooter = document.getElementById('ash_footer')
-devfooter.innerHTML = footer()
+// import footer from '../script/footer.js'
+// let devfooter = document.getElementById('ash_footer')
+// devfooter.innerHTML = footer()
 
 
 
@@ -310,7 +310,7 @@ devfooter.innerHTML = footer()
 
        localStorage.setItem("data_obj",JSON.stringify(arr))
 
-         window.location.href="product_description.html";
+         window.location.href="http://localhost:5502/product_description";
          devbtn.style.backgroundColor="#ee7f1a";
     
   }
@@ -320,12 +320,7 @@ devfooter.innerHTML = footer()
 
 function cart(){
 
-    window.location.href="../html/cart.html"
+    window.location.href="http://localhost:5502/cart"
 
 }
-
-
-         
-     
-
 </script>

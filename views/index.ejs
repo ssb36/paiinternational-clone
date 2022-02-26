@@ -6,17 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style/main.css">
-    <link rel="stylesheet" href="./style/testnav.css">
-    <link rel="stylesheet" href="./style/footer.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/testnav.css">
+    <link rel="stylesheet" href="style/footer.css">
 </head>
 
 <body>
 
-    <!-- navbar -->
-    <div id="container"> </div>
-
-    <!-- 1st Div -->
+    
+    <%- include("partials/nav.ejs") %>
+    
     <div id="div1">
 
         <div id="div1leftbtn">
@@ -303,8 +302,8 @@
 
     </div>
 
-
-    <div id="footer"></div>
+    <%- include("partials/footer.ejs") %>
+    
 </body>
 
 </html>
@@ -367,21 +366,25 @@
     // -----------------------navbar------------------------------
 
 
-    import navbar from '../script/testnav.js'
+    // import navbar from '../script/testnav.js'
 
-    console.log('navbar:', navbar)
+    // console.log('navbar:', navbar)
 
-    let container = document.getElementById('container')
-    container.innerHTML = navbar()
+    // let container = document.getElementById('container')
+    // container.innerHTML = navbar()
     var devacce = document.getElementById('devassesories').addEventListener('click', ShowAcees)
-
+// console.log("devacce",devacce);
     async function ShowAcees() {
+        console.log("hello user");
         try {
-            var res = await fetch("http://localhost:5502/products")
+            console.log("hello user1");
+            var res = await fetch("http://localhost:5502/products");
+            console.log(res);
             var data = await res.json()
             console.log('data:', data)
             localStorage.setItem("key", JSON.stringify(data))
-            window.location.href = "./html/product.html";
+            window.location.href = "http://localhost:5502/productpage";
+
         }
         catch (error) {
             console.log(error)
@@ -446,9 +449,9 @@
 
     // -----------------------------------footer---------------------------------
 
-    import footer from '../script/footer.js'
-    let devfooter = document.getElementById('footer')
-    devfooter.innerHTML = footer()
+    // import footer from '../script/footer.js'
+    // let devfooter = document.getElementById('footer')
+    // devfooter.innerHTML = footer()
 
 
 
@@ -456,6 +459,6 @@
 
     function cart() {
 
-        window.location.href = "../html/cart.html"
+        window.location.href = "http://localhost:5502/cart"
     }
 </script>

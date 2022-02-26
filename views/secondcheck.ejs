@@ -6,14 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="../style/check.css">
-  <link rel="stylesheet" href="../style/footer.css" />
-  <link rel="stylesheet" href="../style/testnav.css" />
+  <link rel="stylesheet" href="style/check.css">
+  <link rel="stylesheet" href="style/footer.css" />
+  <link rel="stylesheet" href="style/testnav.css" />
   <script src="https://kit.fontawesome.com/5c6293b5b4.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <div id="p_cont"></div>
+  <%- include("partials/nav.ejs") %>
   <div class="container">
     <div class="top">
       <span class="sp1">Home</span>
@@ -59,7 +59,7 @@
           </div>
 
           <div class="col2b">
-            <a href="address.html" id="btn">+ Add Address</a>
+            <a href="http://localhost:5502/address" id="btn">+ Add Address</a>
           </div>
         </div>
 
@@ -72,7 +72,7 @@
           <span>Shipping Method</span>
         </div>
         <!-- ndfghgfdjgcd -->
-        <a href="./payment.html" class="pay">
+        <a href="http://localhost:5502/payment" class="pay">
           <div class="col3">
             <div class="on or">5</div>
             <span>Choose Payment Mode
@@ -141,7 +141,7 @@
       </div>
     </div>
   </div>
-  <div id="p_foot"></div>
+  <%- include("partials/footer.ejs") %>
 </body>
 
 </html>
@@ -160,57 +160,68 @@
   area.textContent = address_det.add + " " + address_det.city + "," + address_det.state + "-" + address_det.pin;
   land.textContent = address_det.pin;
 
+var login_name=document.getElementById("p_login_name")
+login_name.innerHTML=address_det.name
+login_name.style="margin-left:20px; font-weight:bold; font-size:20px; font-family:sans-serif; "
 
+var login_number=document.getElementById("p_login_number")
+login_number.innerHTML= address_det.phon;
+login_number.style="margin-left:20px; font-weight:bold; font-size:20px;font-family:sans-serif;"
+
+
+let devbtn=document.getElementById("devbtn");
+      devbtn.innerText=`Welcome ${address_det.name}`;
+      devbtn.style.backgroundColor="#ee7f1a";
 </script>
 <script type="module">
 
   // -------------------------------importin data                        
 
-  import navbar from "../script/testnav.js";
+  // import navbar from "../script/testnav.js";
 
-  let container = document.getElementById("p_cont");
+  // let container = document.getElementById("p_cont");
 
-  container.innerHTML = navbar();
+  // container.innerHTML = navbar();
 
 
-  import footer from "../script/footer.js";
+  // import footer from "../script/footer.js";
 
-  let body_footer = document.getElementById("p_foot");
+  // let body_footer = document.getElementById("p_foot");
 
-  body_footer.innerHTML = footer();
+  // body_footer.innerHTML = footer();
 
-  let devbtn = document.getElementById("devbtn");
-  devbtn.innerText = "Login"
+  // let devbtn = document.getElementById("devbtn");
+  // devbtn.innerText = "Login"
 
   // ----------------------------------importing end----------------------------------
 
-  var p_checkout=JSON.parse(localStorage.getItem("user_reg_details"));
+//   var p_checkout=JSON.parse(localStorage.getItem("user_reg_details"));
 
-console.log(p_checkout)
+// console.log(p_checkout)
 
-var login_name=document.getElementById("p_login_name")
-login_name.innerHTML=p_checkout[p_checkout.length-1].first_name 
-login_name.style="margin-left:20px; font-weight:bold; font-size:20px; font-family:sans-serif; "
+// var login_name=document.getElementById("p_login_name")
+// login_name.innerHTML=
+// login_name.style="margin-left:20px; font-weight:bold; font-size:20px; font-family:sans-serif; "
 
-var login_number=document.getElementById("p_login_number")
-login_number.innerHTML= p_checkout[p_checkout.length-1].reg_number
-login_number.style="margin-left:20px; font-weight:bold; font-size:20px;font-family:sans-serif;"
+// var login_number=document.getElementById("p_login_number")
+// login_number.innerHTML= p_checkout[p_checkout.length-1].reg_number
+// login_number.style="margin-left:20px; font-weight:bold; font-size:20px;font-family:sans-serif;"
 
 
 // -------------------------------display name---------------------
 
-let displayNameOfUser=JSON.parse(localStorage.getItem("displayNameOfUser"));
-  console.log('displayNameOfUser:', displayNameOfUser)
+// let displayNameOfUser=JSON.parse(localStorage.getItem("displayNameOfUser"));
+//   console.log('displayNameOfUser:', displayNameOfUser)
 
 
-  if(displayNameOfUser==null){
-      devbtn.innerText="Login";
-  }
-  else{
-      let devbtn=document.getElementById("devbtn");
-      devbtn.innerText=`Welcome ${displayNameOfUser}`;
-      devbtn.style.backgroundColor="#ee7f1a";
-  }
+//   if(displayNameOfUser==null){
+//       devbtn.innerText="Login";
+//   }
+//   else{
+//       let devbtn=document.getElementById("devbtn");
+//       devbtn.innerText=`Welcome ${displayNameOfUser}`;
+//       devbtn.style.backgroundColor="#ee7f1a";
+//   }
   
 
 
@@ -221,13 +232,39 @@ document.getElementById('devcart').addEventListener("click",cart)
 
 function cart(){
 
-    window.location.href="../html/cart.html"
+    window.location.href="http://localhost:5502/cart"
+
+
+}
 
 
 
+let price_data = JSON.parse(localStorage.getItem("pai_price_data"));
+let dis_p = 0; 
+console.log("price_data",price_data)
+    displayPrice()
+function displayPrice() {
+//   console.log("price_data",price_data)
+    document.getElementById("p_wot").textContent = price_data.p_wot.toFixed(2);
+    document.getElementById("p_cgst").textContent = price_data.cgst_p.toFixed(2);
+    document.getElementById("p_sgst").textContent = price_data.sgst_p.toFixed(2);
+    document.getElementById("sub_total").textContent = price_data.sub_p.toFixed(2);
+    document.getElementById("dis_p").textContent = dis_p.toFixed(2);
+    document.getElementById("tot_p").textContent =price_data.total_p.toFixed(2);
+}
+function coupon_apply() {
+    let coupon_code = document.getElementById("e_coupon").value;
+    if (coupon_code == "pai123@5") {
+        dis_p = sub_p * 5 / 100;
+        displayPrice()
+    }
+    else {
+        alert("Invalid coupon code")
+    }
 
+}
 
 </script>
-<script src="../script/check.js">
+<!-- <script src="../public/script/check.js">
   
-</script>
+</script> -->

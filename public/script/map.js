@@ -1,16 +1,16 @@
 
-import navbar from "../script/testnav.js";
+// import navbar from "../script/testnav.js";
 
-let div_container=document.getElementById("div_container");
+// let div_container=document.getElementById("div_container");
 
-div_container.innerHTML=navbar();
+// div_container.innerHTML=navbar();
 
 
-import footer from "../script/footer.js";
+// import footer from "../script/footer.js";
 
-let div_footer=document.getElementById("footer");
+// let div_footer=document.getElementById("footer");
 
-div_footer.innerHTML=footer();
+// div_footer.innerHTML=footer();
 
 
   // -------------------------------display name---------------------

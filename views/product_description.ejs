@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../style/product.css">
+    <link rel="stylesheet" href="style/product.css"/>
+  <link rel="stylesheet" href="style/testnav.css"/>
+    <link rel="stylesheet" href="style/footer.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
 
@@ -15,7 +17,8 @@
 </head>
 
 <body>
-    <div id="ash_navbox"></div>
+    <%- include("partials/nav.ejs") %>
+   
     <div id="ash_box">
 
 
@@ -44,22 +47,22 @@
 
     </div>
     </div>
-    <div id="ash_foot"></div>
-
+    
+    <%- include("partials/footer.ejs") %>
 </body>
 
 </html>
 <script type="module">
-    import navbar from "../script/testnav.js";
+    // import navbar from "../script/testnav.js";
 
-    var nav = document.getElementById("ash_navbox")
+    // var nav = document.getElementById("ash_navbox")
 
-    nav.innerHTML = navbar()
+    // nav.innerHTML = navbar()
 
-    import footer from '../script/footer.js'
+    // import footer from '../script/footer.js'
 
-    let devfooter = document.getElementById('ash_foot')
-    devfooter.innerHTML = footer()
+    // let devfooter = document.getElementById('ash_foot')
+    // devfooter.innerHTML = footer()
 
 
     
@@ -170,7 +173,7 @@
 
         localStorage.setItem("cart_key", JSON.stringify(products))
 
-          window.location.href="cart.html"
+          window.location.href="http://localhost:5502/cart"
 
           
     document.getElementById('devcart').addEventListener("click",cart)

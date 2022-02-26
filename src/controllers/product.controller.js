@@ -10,7 +10,7 @@ router.get("", async (req, res) => {
     try{
         const product = await Product.find().lean().exec()
         res.status(200).send(product)
-
+        // return res.render("product.ejs");
     }
     catch(e){
         res.status(500).send(e.message)

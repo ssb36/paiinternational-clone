@@ -1,8 +1,10 @@
+console.log("here")
 let price_data = JSON.parse(localStorage.getItem("pai_price_data"));
-let dis_p=0; 
+let dis_p = 0; 
+console.log("price_data",price_data)
     displayPrice()
 function displayPrice() {
-  console.log(price_data)
+//   console.log("price_data",price_data)
     document.getElementById("p_wot").textContent = price_data.p_wot.toFixed(2);
     document.getElementById("p_cgst").textContent = price_data.cgst_p.toFixed(2);
     document.getElementById("p_sgst").textContent = price_data.sgst_p.toFixed(2);
