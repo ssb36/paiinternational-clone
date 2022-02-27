@@ -163,6 +163,7 @@ function coupon_apply() {
   let coupon_code = document.getElementById("e_coupon").value;
   if (coupon_code == "pai123@5") {
     dis_p = (sub_p * 5) / 100;
+    console.log("dis_p",dis_p)
     p_obj.discount_p = dis_p;
     localStorage.setItem("pai_price_data", JSON.stringify(p_obj));
     displayPrice();
