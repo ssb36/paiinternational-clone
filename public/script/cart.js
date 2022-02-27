@@ -152,7 +152,7 @@ function displayPrice() {
   console.log("dprice", price_data.discount_p);
   console.log(price_data);
   // console.log("price_data.discount_p);
-  if (price_data.discount_p==undefined) {
+  if (!price_data.discount_p) {
     localStorage.setItem("pai_price_data", JSON.stringify(p_obj));
   }
 
