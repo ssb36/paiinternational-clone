@@ -26,8 +26,8 @@
     "url": "https://github.com/ssb36/paiinternational-clone/issues"
   },
   "homepage": "https://github.com/ssb36/paiinternational-clone#readme",
-  "description": "",
   "devDependencies": {
     "nodemon": "^2.0.15"
-  }
+  },
+  "description": ""
 }
