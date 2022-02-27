@@ -27,7 +27,7 @@ app.get("/checkout", async (req, res) => {
     }
 });
 
-app.get("/home", async (req, res) => {
+app.get("", async (req, res) => {
     try {
         return res.render("index.ejs");
     }
