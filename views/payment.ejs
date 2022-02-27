@@ -59,7 +59,7 @@
           </div>
           
           <div class="col2b">
-            <a href="http://localhost:5502/address" id="btn">+ Add Address</a> 
+            <a href="/address" id="btn">+ Add Address</a> 
           </div>
         </div>
 
@@ -160,7 +160,7 @@
 <script>
     function payfun(){
         alert("Payment Successful");
-        window.location.href="http://localhost:5502/home"
+        window.location.href="/home"
     }
 </script>
 <script src="../public/script/check.js">
@@ -205,7 +205,7 @@ document.getElementById('devcart').addEventListener("click",cart)
 
 function cart(){
 
-    window.location.href="http://localhost:5502/cart"
+    window.location.href="/cart"
 }
 let price_data = JSON.parse(localStorage.getItem("pai_price_data"));
 let dis_p = 0; 

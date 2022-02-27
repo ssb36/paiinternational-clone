@@ -112,7 +112,7 @@
                 <input type="checkbox" name="" id=""> <span class="cheksp">Shipping Address</span>
             </div>
            </div>
-           <a href="http://localhost:5502/secondcheck"><button class="btnsv" onclick="detail()">SAVE AND CONTINUE</button></a>
+           <a href="/secondcheck"><button class="btnsv" onclick="detail()">SAVE AND CONTINUE</button></a>
           </div>
         </div>
 
@@ -264,7 +264,7 @@ document.getElementById('devcart').addEventListener("click",cart)
 
 function cart(){
 
-    window.location.href="http://localhost:5502/cart"
+    window.location.href="/cart"
 }
 let price_data = JSON.parse(localStorage.getItem("pai_price_data"));
 let dis_p = 0; 

@@ -378,12 +378,12 @@
         console.log("hello user");
         try {
             console.log("hello user1");
-            var res = await fetch("http://localhost:5502/products");
+            var res = await fetch("/products");
             console.log(res);
             var data = await res.json()
             console.log('data:', data)
             localStorage.setItem("key", JSON.stringify(data))
-            window.location.href = "http://localhost:5502/productpage";
+            window.location.href = "/productpage";
 
         }
         catch (error) {
@@ -459,6 +459,6 @@
 
     function cart() {
 
-        window.location.href = "http://localhost:5502/cart"
+        window.location.href = "/cart"
     }
 </script>
