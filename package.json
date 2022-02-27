@@ -13,7 +13,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/index.js"
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",
@@ -26,5 +26,8 @@
     "url": "https://github.com/ssb36/paiinternational-clone/issues"
   },
   "homepage": "https://github.com/ssb36/paiinternational-clone#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
