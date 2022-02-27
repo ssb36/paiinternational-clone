@@ -152,9 +152,9 @@ function displayPrice() {
   // console.log("dprice", price_data.discount_p);
   // console.log(price_data);
   // console.log("price_data.discount_p);
-  if (!price_data.discount_p) {
-    localStorage.setItem("pai_price_data", JSON.stringify(p_obj));
-  }
+  // if (!price_data.discount_p) {
+  //   localStorage.setItem("pai_price_data", JSON.stringify(p_obj));
+  // }
 
   document.getElementById("p_wot").textContent = p_wot.toFixed(2);
   document.getElementById("p_cgst").textContent = cgst_p.toFixed(2);
