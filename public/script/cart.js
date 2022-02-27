@@ -165,6 +165,7 @@ function coupon_apply() {
     dis_p = (sub_p * 5) / 100;
     console.log("dis_p",dis_p)
     p_obj.discount_p = dis_p;
+    console.log(p_obj);
     localStorage.setItem("pai_price_data", JSON.stringify(p_obj));
     displayPrice();
   } else {
