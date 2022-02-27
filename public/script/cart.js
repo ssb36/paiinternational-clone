@@ -147,7 +147,6 @@ function displayPrice() {
         sgst_p: sgst_p,
         sub_p: sub_p,
        total_p: total_p,
-       discount_p:0.00
     }
   localStorage.setItem("pai_price_data", JSON.stringify(p_obj));
 
