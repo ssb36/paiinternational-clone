@@ -162,8 +162,8 @@ function displayPrice() {
 
   document.getElementById("tot_p").textContent = total_p.toFixed(2);
 
-  
-if (!price_data.discount_p) {
+
+if (!price_data.discount_p || !price_data) {
     localStorage.setItem("pai_price_data", JSON.stringify(p_obj));
   }
 
