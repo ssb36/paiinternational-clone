@@ -147,6 +147,7 @@ function displayPrice() {
         sgst_p: sgst_p,
         sub_p: sub_p,
        total_p: total_p,
+       discount_p:0,
      }
   let price_data = JSON.parse(localStorage.getItem("pai_price_data"));
   // console.log("dprice", price_data.discount_p);
@@ -162,8 +163,8 @@ function displayPrice() {
 
   document.getElementById("tot_p").textContent = total_p.toFixed(2);
 
-
-if (!price_data.discount_p || !price_data) {
+  console.log("price_data", price_data);
+if (!price_data.discount_p || (price_data== null || undefined)) {
     localStorage.setItem("pai_price_data", JSON.stringify(p_obj));
   }
 
