@@ -195,7 +195,12 @@ function cart(){
 
 
 console.log("here");
-let price_data = JSON.parse(localStorage.getItem("pai_price_data"));
+let price_data = JSON.parse(localStorage.getItem("pai_price_data_new"));
+if(price_data==null){
+   price_data = JSON.parse(localStorage.getItem("pai_price_data"));
+}
+
+
 // let dis_p = 0; 
 console.log("price_data",price_data)
     displayPrice()
