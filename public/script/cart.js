@@ -8,6 +8,7 @@ let discount_p;
 let sub_p;
 let total_p;
 let p_wot;
+let p_obj;
 display(cart_items);
 function display(cart_items) {
   sgst_p = 0;
@@ -133,7 +134,7 @@ function remove(index) {
   main1.innerHTML = null;
   display(cart_items);
 }
-let p_obj;
+
 function displayPrice() {
   p_wot = actual_p - discount_p;
   cgst_p = (actual_p * 5) / 100;
@@ -146,7 +147,6 @@ function displayPrice() {
         sgst_p: sgst_p,
         sub_p: sub_p,
       total_p: total_p
-      
     }
   localStorage.setItem("pai_price_data", JSON.stringify(p_obj));
 
