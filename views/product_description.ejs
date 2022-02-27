@@ -148,18 +148,9 @@
 
 
     }
-
-    
-
-
-
-
     function cart(item) {
         console.log("item")
         var products = JSON.parse(localStorage.getItem("cart_key")) || [];
-
-
-
         var cart_obj = {
 
             image: item.image,
@@ -176,13 +167,10 @@
           window.location.href="/cart"
 
           
-    document.getElementById('devcart').addEventListener("click",cart)
+    
     }
-
-function cart(){
-
-    window.location.href="/cart"
-
-
-    }
+//     document.getElementById('devcart').addEventListener("click",gotocart)
+// function gotocart(){
+//     window.location.href="/cart"
+//     }
 </script>
