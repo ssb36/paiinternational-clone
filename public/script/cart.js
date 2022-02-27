@@ -151,7 +151,7 @@ function displayPrice() {
   let price_data = JSON.parse(localStorage.getItem("pai_price_data"));
   console.log("dprice", price_data[discount_p]);
   console.log(price_data);
-  if (!price_data[discount_p]) {
+  if (price_data.discount_p!=undefined) {
     localStorage.setItem("pai_price_data", JSON.stringify(p_obj));
   }
 
