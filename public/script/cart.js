@@ -163,7 +163,7 @@ function displayPrice() {
   document.getElementById("tot_p").textContent = total_p.toFixed(2);
 
   console.log("price_data", price_data);
-if(!price_data.discount_p || price_data== null) {
+if(price_data== null || !price_data.discount_p) {
     localStorage.setItem("pai_price_data", JSON.stringify(p_obj));
   }
 
