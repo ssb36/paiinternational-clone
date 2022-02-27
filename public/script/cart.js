@@ -147,8 +147,11 @@ function displayPrice() {
         sgst_p: sgst_p,
         sub_p: sub_p,
        total_p: total_p,
-    }
-  localStorage.setItem("pai_price_data", JSON.stringify(p_obj));
+     }
+  let price_data = JSON.parse(localStorage.getItem("pai_price_data"));
+  if (!price_data[discount_p]) {
+    localStorage.setItem("pai_price_data", JSON.stringify(p_obj));
+  }
 
   document.getElementById("p_wot").textContent = p_wot.toFixed(2);
   document.getElementById("p_cgst").textContent = cgst_p.toFixed(2);
