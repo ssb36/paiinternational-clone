@@ -165,7 +165,15 @@ function coupon_apply() {
   if (coupon_code == "pai123@5") {
     dis_p = (sub_p * 5) / 100;
     console.log("dis_p",dis_p)
-    p_obj.discount_p = dis_p;
+    // p_obj.discount_p = dis_p;
+    p_obj = {
+      p_wot: p_wot,
+      cgst_p: cgst_p,
+      sgst_p: sgst_p,
+      sub_p: sub_p,
+     total_p: total_p,
+     discount_p:dis_p
+  }
     console.log(p_obj);
     localStorage.setItem("pai_price_data", JSON.stringify(p_obj));
     displayPrice();
