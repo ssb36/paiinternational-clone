@@ -110,7 +110,7 @@ app.get("/services", async (req, res) => {
 // });
 app.use("/login", userController);
 // app.use("/try", checkingController);
-app.listen(5502, async function () {
+app.listen(process.env.PORT || 5502, async function () {
 
     try{
 
