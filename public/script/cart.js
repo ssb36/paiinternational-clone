@@ -133,14 +133,14 @@ function remove(index) {
   main1.innerHTML = null;
   display(cart_items);
 }
-
+let p_obj;
 function displayPrice() {
   p_wot = actual_p - discount_p;
   cgst_p = (actual_p * 5) / 100;
   sgst_p = (actual_p * 5) / 100;
   sub_p = p_wot + cgst_p + sgst_p;
   total_p = sub_p - dis_p;
-    let p_obj = {
+     p_obj = {
         p_wot: p_wot,
         cgst_p: cgst_p,
         sgst_p: sgst_p,
