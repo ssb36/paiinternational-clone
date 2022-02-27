@@ -146,7 +146,8 @@ function displayPrice() {
         cgst_p: cgst_p,
         sgst_p: sgst_p,
         sub_p: sub_p,
-      total_p: total_p
+       total_p: total_p,
+       discount_p:0.00
     }
   localStorage.setItem("pai_price_data", JSON.stringify(p_obj));
 
@@ -166,7 +167,7 @@ function coupon_apply() {
     console.log("dis_p",dis_p)
     p_obj.discount_p = dis_p;
     console.log(p_obj);
-    localStorage.setItem("pai_price_data_new", JSON.stringify(p_obj));
+    localStorage.setItem("pai_price_data", JSON.stringify(p_obj));
     displayPrice();
   } else {
     alert("Invalid coupon code");
