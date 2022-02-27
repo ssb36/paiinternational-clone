@@ -145,8 +145,8 @@ function displayPrice() {
         cgst_p: cgst_p,
         sgst_p: sgst_p,
         sub_p: sub_p,
-      total_p: total_p,
-      discount_p:discount_p
+      total_p: total_p
+      
     }
   localStorage.setItem("pai_price_data", JSON.stringify(p_obj));
 
@@ -163,6 +163,8 @@ function coupon_apply() {
   let coupon_code = document.getElementById("e_coupon").value;
   if (coupon_code == "pai123@5") {
     dis_p = (sub_p * 5) / 100;
+    p_obj.discount_p = dis_p;
+    localStorage.setItem("pai_price_data", JSON.stringify(p_obj));
     displayPrice();
   } else {
     alert("Invalid coupon code");
