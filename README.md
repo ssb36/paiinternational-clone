@@ -39,6 +39,22 @@ We can sign in login,signup,add products to cart,buy prducts
   <img src="https://miro.medium.com/max/2560/1*ODZPVUejLh8lNqsOETi6rw.jpeg" title="Landing">
 </p>
 
+# Funtionallity Added
+
+* Signup
+
+* Sorting the produucts in Product page(Low to high & High to Low)
+
+* Adding prducts to cart
+
+* Making payment
+
+* Login
+
+* removing products increasing quantity of products
+
+* changing payment methods
+
 
 
 
