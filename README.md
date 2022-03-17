@@ -76,7 +76,7 @@ We can sign in login,signup,add products to cart,buy prducts
 
 # How To Clone Our Project
 
-$ [[Link Text|https://github.com/ssb36/paiinternational-clone.git]]
+$Open GitBash
 $ git clone https://github.com/ssb36/paiinternational-clone.git
 $ cd paiinternational-clone
 $ npm install
