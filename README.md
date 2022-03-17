@@ -55,6 +55,14 @@ We can sign in login,signup,add products to cart,buy prducts
 
 * changing payment methods
 
+# Team Members
+
+* Ashish Sharma
+* Shakti Dev Sah
+* Pavan Kallem
+* Priyanka Dubey
+* Pidugu Divya
+* Shubham Borade
 
 
 
