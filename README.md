@@ -64,5 +64,15 @@ We can sign in login,signup,add products to cart,buy prducts
 * Pidugu Divya
 * Shubham Borade
 
+# Tech Stack Used
+
+* Html
+* Css
+* Ejs
+* Nodejs
+* Javascript
+* MongoDB
+* Express
+
 
 
