@@ -12,6 +12,6 @@ We can sign in login,signup,add products to cart,buy prducts
 * Landing Page
 
 <p align="center">
-  <img src="https://miro.medium.com/max/2560/1*vKwN8LZGCda1Il7R0TGHnQ.jpeg" width="350" title="Landing">
+  <img src="https://miro.medium.com/max/2560/1*vKwN8LZGCda1Il7R0TGHnQ.jpeg" title="Landing">
 </p>
 
