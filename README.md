@@ -75,12 +75,13 @@ We can sign in login,signup,add products to cart,buy prducts
 * Express
 
 # How To Clone Our Project
-
-$Open GitBash
+```
+$ Open GitBash
 $ git clone https://github.com/ssb36/paiinternational-clone.git
 $ cd paiinternational-clone
 $ npm install
 $ npm start
+```
 
 # Note 
 
