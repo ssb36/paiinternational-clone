@@ -74,5 +74,17 @@ We can sign in login,signup,add products to cart,buy prducts
 * MongoDB
 * Express
 
+# How To Clone Our Project
+
+$ Open Gitbash
+$ git clone https://github.com/ssb36/paiinternational-clone.git
+$ cd paiinternational-clone
+$ npm install
+$ npm start
+
+# Note 
+
+All the images and icon links have been taken from main website and some other internet sources and may be subject to copyright so try not to use the images or icons for business purposes or reproduce them without their approval on the owner of the images and icons used here are just for the making this project and for learning purpose.
+
 
 
